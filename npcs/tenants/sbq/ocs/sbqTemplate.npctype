@@ -69,7 +69,7 @@
 						"default" : { // mood
 							"randomDialogue" : [ "This is my first random greeting line.", "This is my second random greeting line" ],
 							"randomButtonText" : [ "Ok", "Yeah I can tell"],
-							"jump" : "converse" // all jumps are relative to the top of the dialogue tree
+							"jump" : ["converse"] // all jumps are relative to the top of the dialogue tree
 						}
 					}
 				}
@@ -93,19 +93,27 @@
 				"continue" : {
 					"dialogue" : ["I can give you more dialogue options to choose from."],
 					"options" : [
-						[ "Woah, dropdown options.", { "dialogue" : ["Yep, heres one that uses string to jump back."], "jump" : "converse.continue" } ], // this jump uses a string
-						[ "Jump Example", { "jump" : ["converse", "continue", "options", 3, 2] } ], // this is one that goes to another option but the jump can go anywhere really
-						[ "Another Jump Example", { "dialogue" : ["Heres one that jumps back using a table."], "jump" : ["converse", "continue"] } ], // this jump uses a table, both are valid
+						[ "Woah, dropdown options.", {
+							"dialogue" : ["Yep, pretty cool."],
+							"continue" : {
+								"next" : ["random1", "random2"], // using a table for next keys makes it randonly select between them
+								"random1" : { "dialogue" : ["So lets jump back there so you can choose again alright?"], "jump" : ["converse","continue"] },
+								"random2" : {
+									"dialogue" : ["What if we talked a little more?"],
+									"continue" : { "dialogue" : ["Oh alright we'll jump back"], "jump" : ["converse","continue"] }
+								}
+							}
+						}],
+						[ "Jump Example", { "jump" : ["converse", "continue", "options", 1, 2, "continue"] } ], // this is one that goes to another option but the jump can go anywhere really
 						[ "So whats your belly like?", {
 							"next" : "bellyEffect", // the dialogue for the next step down the tree will be based on their bellyEffect setting
 							"voreType" : "oralVore", // this option won't show up if oralVore isn't something either party wants to partake in
-							"default" : { "dialogue" : ["Doesn't really do much"], "jump" : "converse.continue"},
-							"sbqHeal" : { "dialogue" : ["You'd be healed."], "jump" : "converse.continue"},
-							"sbqDigest" : { "dialogue" : ["I'd melt you down."], "jump" : "converse.continue"},
-							"sbqSoftDigest" : { "dialogue" : ["I'd melt you down, but you'd be fine."], "jump" : "converse.continue"}
+							"default" : { "dialogue" : ["Doesn't really do much"], "jump" : ["converse","continue"]},
+							"sbqHeal" : { "dialogue" : ["You'd be healed."], "jump" : ["converse","continue"]},
+							"sbqDigest" : { "dialogue" : ["I'd melt you down."], "jump" : ["converse","continue"]},
+							"sbqSoftDigest" : { "dialogue" : ["I'd melt you down, but you'd be fine."], "jump" : ["converse","continue"]}
 						}]
 					]
-
 				}
 			},
 
@@ -876,7 +884,7 @@
 			"hammerspace" : false,
 
 			// predator prefrences
-			"oralVorePred" : false,
+			"oralVorePred" : true,
 			"tailVorePred" : false,
 			"absorbVorePred" : false,
 			"navelVorePred" : false,
