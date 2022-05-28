@@ -1,10 +1,10 @@
 # What to do here
 
-This `.npctype` file is the most important file of the NPC as it determines all of their dialogue as well as their settings, behavior, vore prefrences, and any uinque scrips they may have
+This `.npctype` file is the most important file of the NPC as it determines all of their dialogue as well as their settings, behavior, vore prefrences, and any uinque scrips they may have.
 
 ## uniqueId
 
-This is a must if you don't want to have multiple instances of the same character around, it should be replaced with the ID of your NPC, if not, do that now
+This is a must if you don't want to have multiple instances of the same character around, it should be replaced with the ID of your NPC, if not, do that now.
 
 ## dialogueBoxScripts
 
@@ -20,7 +20,7 @@ The `dialogueTree` table contains all the lines the NPC will have relating to vo
 
 The dialogue tree has multiple starts relating to different contexts, only the start of each part of the tree is pre defined and must be used, after the start, one can delete or change anything about the tree to make it behave as they wish for their NPC, and get as specific in context of a certain vore type as they wish with their lines by checking the current settings.
 
-The starts of the tree are as follows
+The starts of the tree are as follows.
 
 ### greeting
 
@@ -48,7 +48,7 @@ The `struggleTrigger` key for the next step shouldn't be used in other parts of 
 
 #### vored
 
-The line the NPC says upon getting vored
+The line the NPC says upon getting vored.
 
 #### struggling
 
@@ -62,9 +62,9 @@ The `struggleTrigger` key for the next step shouldn't be used in other parts of 
 
 ## huntingChecklist baitingChecklist
 
-For each of the NPC's moods, you can have a checklist for hunting and baiting, that must be fulfilled by an NPC's potential target for it to consider seeking them out
+For each of the NPC's moods, you can have a checklist for hunting and baiting, that must be fulfilled by an NPC's potential target for it to consider seeking them out.
 
 
 ## sbqDefaultSettings sbqPreyEnabled
 
-The general settings for this NPC, while not required as any setting not defined will fallback to general defaults, you should define all the settings that your NPC would want set, as well as lock any settings that you would need to make sure they stay in character
+The general settings for this NPC, while not required as any setting not defined will fallback to general defaults, you should define all the settings that your NPC would want set, as well as lock any settings that you would need to make sure they stay in character.
