@@ -40,3 +40,9 @@ In the folder `npcs/tenants` you should find a file names `sbqTenantCatalogue.js
 In the folder `npcs/tenants/sbq/ocs` you should find a `README` file instructing you in more detail on what to do, that file is the most important part of this, as it is what makes the NPC actually exist, what controls their properties, as well as where their ID is defined.
 
 In the folder `npcs/sbqHub` you'll find another `README` file that will instruct you on how to have a safe version of your OC and so it will be part of the random selection pool for NPC spawns on Auri's planet, this isn't important, and you can just delete this if you don't care about that.
+
+## Add an NPC house to the village
+
+The last and most optional step of them all, you can create a house to spawn in the village on Auri's planet, as an example for what sort of items to use to summon them as a tenant
+
+If you want to do this, rename the files in `dungeons/missions/sbqHub` and check the `README` on what else to do, else you can just delete the folder

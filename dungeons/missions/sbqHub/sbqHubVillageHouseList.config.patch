@@ -1,0 +1,22 @@
+[
+	// this patch adds the NPC's house to the random slection pool for the hub map
+	{
+		"op": "add",
+		"path": "/-",
+		"value": {
+			"npc" : "sbqHub_templateHouse", // name of the dungeon to be placed
+			"spawnOnce" : true, // set this to true to make sure only one instance of the dungeon will attempt to be spawned
+			"protect" : true, // to make sure your dungeon is protected, can't be dug up
+			"dungeonId" : 8, // leave this as 8 to share IDs with the other houses to be part of the same "village" however if you're going to make your house not protected, please change this to some other number so other houses don't become destructable
+			"placeOffset" : [ -32, 0 ],// the placeOffset should be half of the dungeon's width, this makes sure it centers correctly in the plots of land
+
+			// the checkrequirements is not necessary for the dungeon, but is very much encouraged in the case of it requiring a mod, but not wanting to set that in the mod metadata
+			// if your NPC requires a modded species, I would suggest checking if the image for their body exists
+			// if your NPC is wearing modded armor cosmetics, or holding a modded item, I would suggest checking if each one exists
+			// if your dungeon requires modded objects or materials, I would suggest adding at least one object from each mod used to the item checks
+			// remove the checks your NPC and dungeon do not need to use
+
+			"checkRequirements" : { "checkImage":"/humanoid/sbqTemplate/malebody.png", "checkItems":["coolchest", "coollegs", "lunarbaselantern"] }
+		}
+	}
+]
