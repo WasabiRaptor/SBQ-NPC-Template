@@ -992,7 +992,11 @@
 				"preyEnabled": true,
 
 				"digestImmunity": false,
+				"cumDigestImmunity" : true,
+
 				"transformImmunity": false,
+				"genderswapImmunity" : true,
+
 				"eggImmunity": false,
 
 				"held": true,
