@@ -34,6 +34,12 @@
 	},
 	"scriptConfig" : {
 		"behavior" : "sbqvorevillager",
+		"questGenerator" : {
+			"graduation" : {
+				"nextNpcType" : [] // this prevents the NPC from graduating into crew
+			}
+		},
+
 
 		//"uniqueId" : "sbqTemplate", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
 
