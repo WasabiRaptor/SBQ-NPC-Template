@@ -1016,6 +1016,7 @@
 			// howerver, as this will only ever happen from defining it specifically here, and the mood changing likley being specific to each NPC such changes should always be in character
 			"sbqPreyEnabled" : {
 				"preyEnabled": true,
+				//"preyEnabledLock" : true // example for locking a setting
 
 				"digestImmunity": false,
 				"cumDigestImmunity" : true,
