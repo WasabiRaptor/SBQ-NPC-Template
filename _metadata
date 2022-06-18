@@ -1,0 +1,12 @@
+{
+	"version" : "0.1",
+	"tags" : "",
+	"author" : "Someone cool",
+	"description" : "They're here for the Starbecue",
+	"link" : "https://github.com/Zygahedron/Starbecue",
+	"name" : "SBQ NPC Template", // the name other mods check for
+	"friendlyName" : "SBQ NPC Template", // the string players would see
+	"includes" : [
+		"Starbecue"
+	]
+}

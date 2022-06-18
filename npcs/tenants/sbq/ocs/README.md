@@ -2,6 +2,12 @@
 
 This `.npctype` file is the most important file of the NPC as it determines all of their dialogue as well as their settings, behavior, vore prefrences, and any uinque scrips they may have.
 
+## identity
+
+The identity of your NPC, their appearance and etc, if you want to manually define all that data, you can do so, however, if you are making an NPC that uses existing customization for an existing race, and want a silightly easier time, you can just use the ingame character creator to make your character!
+
+If you've created a player character and you want to use their appearance for an NPC, you can head into your storage folder, and find the correct `.player` file for the character you created, easiest way to get the right one is to have it be your most recenly played character, so therefore will be the most recently modified file, then you'll want to look in your `starbound` folder for a folder that matches the name of your OS, inside you'll find a file called `dump_versioned_json` you will then want to open a command terminal, drag `dump_versioned_json` into it, then drag the `.player` file you want to dump into it, twice, first for input, second for output and append `.json` onto the end of the second one, and hit enter, this will dump a human readable json file of the player data, within which you will be able to find the `identity` table, you can now just copy that over to your NPC and they will have the same customizations!
+
 ## uniqueId
 
 This is a must if you don't want to have multiple instances of the same character around, it should be replaced with the ID of your NPC, if not, do that now.
