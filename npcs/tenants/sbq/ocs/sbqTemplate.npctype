@@ -33,6 +33,7 @@
 		*/
 	},
 	"scriptConfig" : {
+		"isOC" : true, // this is just for scripts to identify this NPC as an OC and for some specific behavior relating to that
 		"behavior" : "sbqvorevillager",
 		"questGenerator" : {
 			"graduation" : {
@@ -864,16 +865,10 @@
 
 		// the pred prefrences and general settings for this NPC are set here!
 		// set each one to the value you want, if there are any that are unset, they'll just go to the default values
-		// most boolean settings for NPCs have two sub settings, those being Enable, and Lock
 
 		// the Enable sub setting is what would allow the NPC to decide itself if it can turn check or uncheck the check for its setting
 		// for example, if "[setting]Enable" was set to true, the NPC would change the value of "[setting]" in its scripts
 		// if "[setting]Enable" is unchecked, "[setting]" will always stay at whatever its current value is whether it was defined in this file, or changed in the deed menu
-
-		// the Lock sub setting is what allows us here, to make it so that people cannot change our NPC's vore prefrences to something we don't like
-		// if "[setting]Lock" is set to true, then a player will never be able to change that value from the vore deed menu, keeping your NPC in character for what they like
-		// this will also lock the player from modifying the "[setting]Enable" value too, however, if it is locked to true, the NPC will still be able to modify the "[setting]" value
-		// howerver, as this will only ever happen from defining it specifically here, and the mood changing likley being specific to each NPC such changes should always be in character
 		"sbqDefaultSettings" : {
 			"mood" : "default",
 			"personality" : "default",
@@ -914,6 +909,16 @@
 			"unbirthPred" : false,
 			"cockVorePred" : false,
 			"breastVorePred" : false
+		},
+
+		// any setting you define above can be modified by a player, this table allows you to define settings a player *cannot* modify, making sure your OC is always in line with your prefrences
+		"sbqOverrideSettings" : {
+
+		},
+		// prey enabled settings are down below, but here are the override settings, which follow the same rules as below, however, a player is *not* allowed to modify any of these settings
+		// this is how you can enforce your OC only being prey for things they enjoy, or if they're prey at all
+		"sbqOverridePreyEnabled" : {
+
 		}
 
 		// the args below are for randomizing specific settings between possible values in the table when the pred is first summoned
@@ -1004,19 +1009,12 @@
 
 			// the prey prefrences for this NPC are set here!
 			// set each one to the value you want, if there are any that are unset, they'll just go to the default values
-			// most boolean settings for NPCs have two sub settings, those being Enable, and Lock
 
 			// the Enable sub setting is what would allow the NPC to decide itself if it can turn check or uncheck the check for its setting
 			// for example, if "[setting]Enable" was set to true, the NPC would change the value of "[setting]" in its scripts
 			// if "[setting]Enable" is unchecked, "[setting]" will always stay at whatever its current value is whether it was defined in this file, or changed in the deed menu
-
-			// the Lock sub setting is what allows us here, to make it so that people cannot change our NPC's vore prefrences to something we don't like
-			// if "[setting]Lock" is set to true, then a player will never be able to change that value from the vore deed menu, keeping your NPC in character for what they like
-			// this will also lock the player from modifying the "[setting]Enable" value too, however, if it is locked to true, the NPC will still be able to modify the "[setting]" value
-			// howerver, as this will only ever happen from defining it specifically here, and the mood changing likley being specific to each NPC such changes should always be in character
 			"sbqPreyEnabled" : {
 				"preyEnabled": true,
-				//"preyEnabledLock" : true // example for locking a setting
 
 				"digestImmunity": false,
 				"cumDigestImmunity" : true,
