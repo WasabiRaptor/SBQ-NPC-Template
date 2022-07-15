@@ -873,7 +873,15 @@
 			"mood" : "default",
 			"personality" : "default",
 
-			"bellyEffect" : "sbqRemoveBellyEffects",
+			"bellyEffectSlot" : "none", // the settings in this group exist for each location, just use the correct name (belly, balls, shaft, womb, tail, breasts)
+			//"bellyHammerspaceDisabled" : false,
+			//"bellyVisualMin" : 0
+			//"bellyVisualMax" : 2
+			//"bellyNoneEnable" : true,
+			//"bellyHealEnable" : true,
+			//"bellyDigestEnable" : true,
+			//"bellySoftDigestEnable" : true,
+
 			"bellySounds" : true,
 			"displayDigest" : false,
 
@@ -882,21 +890,6 @@
 			"escapeDifficultyMax": 0,
 
 			"impossibleEscape": false,
-			"visualMax" : {
-				// "belly" : 1 // per location size defining, say a species can have at max 2 people in belly, but you'd prefer your OC only have one slot
-			},
-			"visualMin" : {
-				// "belly" : 1 // per location size defining, makes it so your pred will visualy always have this number of occupants, even if they haven't eaten anyone
-			},
-			"visualLock" : {
-				// "belly" : true // prevents the player from modifying the visual values for that location in the deed
-			},
-			"hammerspaceDisabled" : {
-				// "belly" : true // disables hammerspace for the specific location
-			},
-			"hammerspaceDisabledLock" : {
-				// "belly" : true // locks the value of hammerspace for the specific location
-			},
 			"hammerspace" : false,
 
 			// predator prefrences
@@ -913,7 +906,10 @@
 
 		// any setting you define above can be modified by a player, this table allows you to define settings a player *cannot* modify, making sure your OC is always in line with your prefrences
 		"sbqOverrideSettings" : {
-
+			//"bellyNoneEnable" : false,
+			//"bellyHealEnable" : false,
+			//"bellyDigestEnable" : false,
+			//"bellySoftDigestEnable" : false,
 		},
 		// prey enabled settings are down below, but here are the override settings, which follow the same rules as below, however, a player is *not* allowed to modify any of these settings
 		// this is how you can enforce your OC only being prey for things they enjoy, or if they're prey at all
@@ -921,77 +917,25 @@
 
 		}
 
-		// the args below are for randomizing specific settings between possible values in the table when the pred is first summoned
-		// specific OCs will probably have specific prefrences in mind, so they likely will not randomize
+		// the args below are for randomizing specific settings between possible values in the table when the pred is first summoned, a few examples have been defined
+		// specific OCs will probably have specific prefrences in mind, so you may not want things to randomize at all
 		/*
 		"sbqRandomizeSettings" : {
 			"oralVorePred" : [true,false],
-			"tailVorePred" : [true,false],
-			"navelVorePred" : [true,false],
-			"absorbVorePred" : [true,false],
-
 			"oralVorePredEnable" : [true,false],
-			"tailVorePredEnable" : [true,false],
-			"navelVorePredEnable" : [true,false],
-			"absorbVorePredEnable" : [true,false],
+
+			"bellyEffectSlot" : [ "none", "heal", "softDigest", "digest"],
 
 			// we shouldn't have the randomly generated preds generate with nsfw stuff
 			// not everyone wants to stumble across an NPC with their dick out
 
 			//"cockVorePred" : [true,false],
-			//"analVorePred" : [true,false],
-			//"breastVorePred" : [true,false],
-			//"unbirthPred" : [true,false],
-
-			//"cockVorePredEnable" : [true,false],
-			//"analVorePredEnable" : [true,false],
-			//"breastVorePredEnable" : [true,false],
-			//"unbirthPredEnable" : [true,false],
-
-			"bellyEffect" : [ "sbqRemoveBellyEffects", "sbqHeal", "sbqDigest", "sbqSoftDigest"],
-
-			"BENoneEnable" : [true,false],
-			"BEHealEnable" : [true,false],
-			"BEDigestEnable" : [true,false],
-			"BESoftDigestEnable" : [true,false],
-
-			"hammerspace" : [true,false],
-
-			"displayDigest" : [true,false],
-
-			"personality" : ["default", "flirty", "shy"]
+			//"cockVorePredEnable" : [true,false]
 		}
 		*/
 		/*
 		"sbqRandomizePreySettings" : {
-			"oralVore" : [true,false],
-			"tailVore" : [true,false],
-			"navelVore" : [true,false],
-			"absorbVore" : [true,false],
-
-			"cockVore" : [true,false],
-			"analVore" : [true,false],
-			"breastVore" : [true,false],
-			"unbirth" : [true,false],
-
-			"oralVoreEnable" : [true,false],
-			"tailVoreEnable" : [true,false],
-			"navelVoreEnable" : [true,false],
-			"absorbVoreEnable" : [true,false],
-
-			"cockVoreEnable" : [true,false],
-			"analVoreEnable" : [true,false],
-			"breastVoreEnable" : [true,false],
-			"unbirthEnable" : [true,false],
-
-			"digestImmunity" : [true,false],
-			"digestImmunityEnable" : [true,false],
-
-			"eggImmunity" : [true,false],
-			"eggImmunityEnable" : [true,false],
-
-			"transformImmunity" : [true,false],
-			"transformImmunityEnable" : [true,false]
+			"oralVore" : [true,false]
 		},
 		*/
 	},
@@ -1015,8 +959,11 @@
 			// if "[setting]Enable" is unchecked, "[setting]" will always stay at whatever its current value is whether it was defined in this file, or changed in the deed menu
 			"sbqPreyEnabled" : {
 				"preyEnabled": true,
+				//"preyEnabledEnable": true,
 
 				"digestImmunity": false,
+				//"digestImmunityEnable": true,
+
 				"cumDigestImmunity" : true,
 
 				"transformImmunity": false,

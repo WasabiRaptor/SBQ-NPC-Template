@@ -71,6 +71,10 @@ The `struggleTrigger` key for the next step shouldn't be used in other parts of 
 For each of the NPC's moods, you can have a checklist for hunting and baiting, that must be fulfilled by an NPC's potential target for it to consider seeking them out.
 
 
-## sbqDefaultSettings sbqPreyEnabled
+## sbqDefaultSettings sbqPreyEnabled sbqOverrideSettings sbqOverridePreyEnabled
 
 The general settings for this NPC, while not required as any setting not defined will fallback to general defaults, you should define all the settings that your NPC would want set, as well as lock any settings that you would need to make sure they stay in character.
+
+## deleting unecessary parts
+
+If there are any parts of the config here you may feel are unecessary for your NPC, such as parts of the dialogue tree containing lines for things your NPC will not be partaking in, just delete that part of the tree! there should be no consequences as long as you do it correctly, which is why I suggest using an editor such as VSC so you can just collapse the region, and easily see what you have to delete
