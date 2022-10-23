@@ -30,6 +30,7 @@
 				// up to you if you want to make them immune to these or not, though on the hub map it would probably be wise to do so
 				"digestImmunity": true,
 				"cumDigestImmunity": true,
+				"femcumDigestImmunity": true,
 				"transformImmunity": true,
 				"genderswapImmunity": true
 			}
