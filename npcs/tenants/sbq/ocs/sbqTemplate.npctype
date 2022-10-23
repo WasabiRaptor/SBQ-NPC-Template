@@ -964,7 +964,14 @@
 				"digestImmunity": false,
 				//"digestImmunityEnable": true,
 
-				"cumDigestImmunity" : true,
+				"cumDigestImmunity": true,
+				"femcumDigestImmunity": true,
+				"milkDigestImmunity" : true,
+
+				"allowSoftDigest" : false,
+				"allowCumSoftDigest" : false,
+				"allowFemcumSoftDigest" : false,
+				"allowMilkSoftDigest" : false,
 
 				"transformImmunity": false,
 				"genderswapImmunity" : true,
