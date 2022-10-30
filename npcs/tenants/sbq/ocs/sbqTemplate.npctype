@@ -875,14 +875,15 @@
 
 			"bellyEffectSlot" : "none", // the settings in this group exist for each location, just use the correct name (belly, balls, shaft, womb, tail, breasts)
 			//"bellyHammerspaceDisabled" : false,
-			//"bellyVisualMin" : 0
-			//"bellyVisualMax" : 2
+			//"bellyVisualMin" : 0,
+			//"bellyVisualMax" : 2,
 			//"bellyNoneEnable" : true,
 			//"bellyHealEnable" : true,
 			//"bellyDigestEnable" : true,
 			//"bellySoftDigestEnable" : true,
-
+			//"bellyDifficultyMod" : 0,
 			"bellySounds" : true,
+
 			"displayDigest" : false,
 
 			"escapeDifficulty": 0,
