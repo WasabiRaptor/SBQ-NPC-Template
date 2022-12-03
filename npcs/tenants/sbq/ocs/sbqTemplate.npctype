@@ -872,9 +872,6 @@
 		// the pred prefrences and general settings for this NPC are set here!
 		// set each one to the value you want, if there are any that are unset, they'll just go to the default values
 
-		// the Enable sub setting is what would allow the NPC to decide itself if it can turn check or uncheck the check for its setting
-		// for example, if "[setting]Enable" was set to true, the NPC would change the value of "[setting]" in its scripts
-		// if "[setting]Enable" is unchecked, "[setting]" will always stay at whatever its current value is whether it was defined in this file, or changed in the deed menu
 		"sbqDefaultSettings" : {
 			"mood" : "default",
 			"personality" : "default",
@@ -915,10 +912,6 @@
 		"sbqOverrideSettings" : {
 			"crewmateGraduation" : false
 
-			//"bellyNoneEnable" : false,
-			//"bellyHealEnable" : false,
-			//"bellyDigestEnable" : false,
-			//"bellySoftDigestEnable" : false,
 		},
 		// prey enabled settings are down below, but here are the override settings, which follow the same rules as below, however, a player is *not* allowed to modify any of these settings
 		// this is how you can enforce your OC only being prey for things they enjoy, or if they're prey at all
@@ -931,7 +924,6 @@
 		/*
 		"sbqRandomizeSettings" : {
 			"oralVorePred" : [true,false],
-			"oralVorePredEnable" : [true,false],
 
 			"bellyEffectSlot" : [ "none", "heal", "softDigest", "digest"],
 
@@ -939,7 +931,6 @@
 			// not everyone wants to stumble across an NPC with their dick out
 
 			//"cockVorePred" : [true,false],
-			//"cockVorePredEnable" : [true,false]
 		}
 		*/
 		/*
@@ -963,43 +954,46 @@
 			// the prey prefrences for this NPC are set here!
 			// set each one to the value you want, if there are any that are unset, they'll just go to the default values
 
-			// the Enable sub setting is what would allow the NPC to decide itself if it can turn check or uncheck the check for its setting
-			// for example, if "[setting]Enable" was set to true, the NPC would change the value of "[setting]" in its scripts
-			// if "[setting]Enable" is unchecked, "[setting]" will always stay at whatever its current value is whether it was defined in this file, or changed in the deed menu
 			"sbqPreyEnabled" : {
-				"preyEnabled": true,
-				//"preyEnabledEnable": true,
+				"preyEnabled" : true,
 
-				"digestImmunity": false,
-				//"digestImmunityEnable": true,
+				"digestAllow": true,
+				"softDigestAllow" : true,
+				"digestItemDropsAllow" : true,
 
-				"cumDigestImmunity": true,
-				"femcumDigestImmunity": true,
-				"milkDigestImmunity" : true,
+				"cumDigestAllow": true,
+				"cumSoftDigestAllow": true,
+				"cumDigestItemDropsAllow" : true,
 
-				"cumTFImmunity" : true,
+				"femcumDigestAllow": true,
+				"femcumSoftDigestAllow": true,
+				"femcumDigestItemDropsAllow" : true,
 
-				"allowSoftDigest" : false,
-				"allowCumSoftDigest" : false,
-				"allowFemcumSoftDigest" : false,
-				"allowMilkSoftDigest" : false,
+				"milkDigestAllow": true,
+				"milkSoftDigestAllow" : true,
+				"milkDigestItemDropsAllow" : true,
 
-				"transformImmunity": false,
-				"genderswapImmunity" : true,
+				"transformAllow": true,
+				"cumTransformAllow": true,
+				"genderswapAllow": true,
+				"eggAllow": true,
 
-				"eggImmunity": false,
+				"held" : true,
 
-				"held": true,
+				"oralVore" : true,
+				"tailVore" : true,
+				"absorbVore" : true,
+				"navelVore" : true,
 
-				"oralVore": true,
-				"tailVore": true,
-				"absorbVore": true,
-				"navelVore": true,
+				"analVore" : true,
+				"unbirth" : true,
+				"cockVore" : true,
+				"breastVore" : true,
 
-				"analVore": true,
-				"unbirth": true,
-				"cockVore": true,
-				"breastVore": true
+				"bellyInfusion" : true,
+				"cockInfusion" : true,
+				"pussyInfusion" : true,
+				"breastsInfusion" : true
 			}
 		}
 	}
