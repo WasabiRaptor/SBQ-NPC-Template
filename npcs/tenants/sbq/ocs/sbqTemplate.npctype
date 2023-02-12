@@ -409,14 +409,14 @@
 			"letout" : {
 				"next" : "voreType",
 				"oralVore" : { // voreType
-					"next" : "struggleTrigger",
-					"true" : { // prey struggling out
-						"next" : "race",
-						"default" : { // race
-							"next" : "personality",
-							"default" : { // personality
-								"next" : "mood",
-								"default" : { // mood
+					"next" : "race",
+					"default" : { // race
+						"next" : "personality",
+						"default" : { // personality
+							"next" : "mood",
+							"default" : { // mood
+								"next" : "struggleTrigger",
+								"true" : { // prey struggling out
 									"next" : "getLocationEffect",
 									"default" : { "randomDialogue" : [ "Ahh... ok you want out.", "Why leave?", "Mmm... fine you can come out.", "I actually liked having you in there..." ] },
 									"sbqHeal" : { "randomDialogue" : [ "You do know its safer inside me right?", "Are you sure you're ready to come out?", "Maybe you should get back in... heal a little longer.", "You can come back to heal any time." ]},
@@ -443,17 +443,8 @@
 										"true" : { "randomDialogue" : [ {"add":"letout.voreType.struggleTrigger.race.personality.mood.locationEffect"} ] }
 									},
 									"digested" : { "randomDialogue" : ["Ah... you want out... just a moment to reform.", "Ah ok, I'll reform you now.", "Fine, I'll reform you now.", "Alright, I'll reform you."]}
-								}
-							}
-						}
-					},
-					"false" : { // pred letting prey out
-						"next" : "race",
-						"default" : { // race
-							"next" : "personality",
-							"default" : { // personality
-								"next" : "mood",
-								"default" : { // mood
+								},
+								"false" : { // pred letting prey out
 									"next" : "getLocationEffect",
 									"default" : { "randomDialogue" : [ "You can come out now.", "Time to come out.", "You can't stay in there forever.", "Time to get out." ] },
 									"sbqHeal" : { "randomDialogue" : [ "You're probably patched up enough.", "I think you've spent enough time healing.", "I think you should be feeling much better now.", "My stomach does wonders for healing doesn't it?"] },
@@ -484,14 +475,14 @@
 				"navelVore" : "letout.oralVore", // don't need to write unique lines for it yet
 
 				"unbirth" : { // voreType
-					"next" : "struggleTrigger",
-					"true" : { // prey struggling out
-						"next" : "race",
-						"default" : { // race
-							"next" : "personality",
-							"default" : { // personality
-								"next" : "mood",
-								"default" : { // mood
+					"next" : "race",
+					"default" : { // race
+						"next" : "personality",
+						"default" : { // personality
+							"next" : "mood",
+							"default" : { // mood
+								"next" : "struggleTrigger",
+								"true" : { // struggleTrigger
 									"next" : "getLocationEffect",
 									"default" : { "randomDialogue" : [ "Happy birthday.", "Ah~ Why'd you come out?", "Mmm~ I thought you were pretty comfortable.", "I thought you liked it in there.", "Oh... alright." ] },
 									"transformed" : "letout.oralVore.struggleTrigger.race.personality.mood.transformed",
@@ -502,17 +493,8 @@
 										"false" : { "randomDialogue" : [ "Don't want to be trapped in an egg?", "You don't like eggs?" ] },
 										"true" : { "randomDialogue" : [ {"add":"letout.voreType.struggleTrigger.race.personality.mood.locationEffect"} ] }
 									}
-								}
-							}
-						}
-					},
-					"false" : { // pred letting prey out
-						"next" : "race",
-						"default" : { // race
-							"next" : "personality",
-							"default" : { // personality
-								"next" : "mood",
-								"default" : { // mood
+								},
+								"false" : { // struggleTrigger
 									"next" : "getLocationEffect",
 									"default" : { "randomDialogue" : [ "Happy birthday.", "I think you've had enough fun in there.", "Maybe its time for you to come out." ] },
 									"transformed" : "letout.oralVore.struggleTrigger.race.personality.mood.transformed",
@@ -524,14 +506,14 @@
 					}
 				},
 				"cockVore" : { // voreType
-					"next" : "struggleTrigger",
-					"true" : { // prey struggling out
-						"next" : "race",
-						"default" : { // race
-							"next" : "personality",
-							"default" : { // personality
-								"next" : "mood",
-								"default" : { // mood
+					"next" : "race",
+					"default" : { // race
+						"next" : "personality",
+						"default" : { // personality
+							"next" : "mood",
+							"default" : { // mood
+								"next" : "struggleTrigger",
+								"true" : { // struggleTrigger
 									"next" : "getLocationEffect",
 									"default" : { "randomDialogue" : [ "Ahh~ ahh that felt so good~", "Could you get back in and squirm some more?", "Mmm~ I thought you were pretty comfortable.", "I thought you liked it in there.", "Oh... alright." ] },
 									"transformed" : { "randomDialogue" : [ "Heh, now you're a blob of cum~", "Ahhh~ I came~" ] },
@@ -540,17 +522,8 @@
 										"false" : { "randomDialogue" : [ "If only you stayed a bit longer...", "Ahh~ you didn't stay in long enough.", "Maybe you should stay in a little longer." ] },
 										"true" : { "randomDialogue" : [ "Hmmm why aren't you turning?", "Come on, don't you want to see what happens?" ] }
 									}
-								}
-							}
-						}
-					},
-					"false" : { // pred letting prey out
-						"next" : "race",
-						"default" : { // race
-							"next" : "personality",
-							"default" : { // personality
-								"next" : "mood",
-								"default" : { // mood
+								},
+								"false" : { // struggleTrigger
 									"next" : "getLocationEffect",
 									"default" : { "randomDialogue" : [ "Hhhhhh I'm gonna cum...", "C-can't hold back much longer~", "Gonna blast you out with a load~", "Ahhhh feeels soooo goood~" ] },
 									"transformed" : { "randomDialogue" : [ "Heh, now you're a blob of cum~", "Ahhh~ I came~" ] },
@@ -850,7 +823,57 @@
 						}
 					}
 				}
+			},
+
+			// lines triggered when a player may recieve a certain reward
+			"rewardNotify": {
+				"next": "race",
+				"default": { // race
+					"next": "personality",
+					"default": { // personality
+						"next": "mood",
+						"default": { // mood
+							"next": "rewardName",
+							"default": {
+								"next": "poolName",
+								"money": {
+									"randomDialogue" : [ "This is nice, I think I'll give you some of my spare change.", "I'll give you a few pixels for giving me a good time."]
+								},
+								"lowValueQuestRewards": {
+									"randomDialogue" : [ "Hmm, I think you deserve something after this.", "I think I'll give you some sort of small gift."]
+								},
+								"mediumValueQuestRewards": {
+									"randomDialogue" : [ "Maybe I've got something a bit better for you this time.", "I've got another gift for you after this."]
+								},
+								"highValueQuestRewards": {
+									"randomDialogue" : [ "I think you'll really like what I've gotten you.", "My next gift will be really good heh."]
+								}
+							}
+						}
+					}
+				}
+			},
+
+			// a line of dialogue triggered when size is changed by the size ray or something else
+			"sizeChanged" : {
+				"next" : "race",
+				"default" : { // race
+					"next" : "personality",
+					"default" : { // personality
+						"next" : "mood",
+						"default" : { // mood
+							"next" : "shrinkOrGrow",
+							"shrink" : {
+								"randomDialogue" : ["Why's everything getting bigger?", "Ah! I'm shrinking!"]
+							},
+							"grow" : {
+								"randomDialogue" : ["Why's everything getting smaller?", "Ah! I'm growing!"]
+							}
+						}
+					}
+				}
 			}
+
 		},
 		// when hunting for prey, a checklist to have them only seek out prey that match the settings
 		// any settings not defined in the checlkist for that vore type can be anything
