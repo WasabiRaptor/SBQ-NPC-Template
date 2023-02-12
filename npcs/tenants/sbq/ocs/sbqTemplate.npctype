@@ -70,6 +70,8 @@
 			// if no script is found it checks if a setting matching the name step exists, if so it attempts to use its value for the next step, the setting's name, or default
 			// if no setting is found it only attempts to go down the branch with the matching name of the next step
 
+			"dialogueTreeReturn" : ["converse"], // this sets it so that when you reach the end of a tree with nowhere to continue, and the button has no actions, it will return to the most recent time it saw one of these while moving down the tree
+
 			// greeting is the default start of the tree
 			// settings come from itself
 			//"greeting" : "/npcs/tenants/sbq/sbqVoreVillager.npctype:scriptConfig.dialogueTree.greeting" // individual steps in the dialogue tree can also have their path pointed to another file
@@ -114,16 +116,18 @@
 					"Like what?"
 				],
 				"continue" : {
+					"dialogueTreeReturn" : ["converse","continue"], // this sets it so that when you reach the end of a tree with nowhere to continue, and the button has no actions, it will return here
+
 					"dialogue" : ["I can give you more dialogue options to choose from."],
 					"options" : [
 						[ "Woah, dropdown options.", {
 							"dialogue" : ["Yep, pretty cool."],
 							"continue" : {
 								"next" : ["random1", "random2"], // using a table for next keys makes it randonly select between them
-								"random1" : { "dialogue" : ["So lets jump back there so you can choose again alright?"], "jump" : ["converse","continue"] },
+								"random1" : { "dialogue" : ["So lets jump back there so you can choose again alright?"] },
 								"random2" : {
 									"dialogue" : ["What if we talked a little more?"],
-									"continue" : { "dialogue" : ["Oh alright we'll jump back"], "jump" : ["converse","continue"] }
+									"continue" : { "dialogue" : ["Oh alright we'll jump back"], "jump" : ["converse","continue"] } // a jump can also be manually defined
 								}
 							}
 						}],
@@ -131,10 +135,10 @@
 						[ "So whats your belly like?", {
 							"next" : "bellyEffect", // the dialogue for the next step down the tree will be based on their bellyEffect setting
 							"voreType" : "oralVore", // this option won't show up if oralVore isn't something either party wants to partake in
-							"default" : { "dialogue" : ["Doesn't really do much"], "jump" : ["converse","continue"]},
-							"sbqHeal" : { "dialogue" : ["You'd be healed."], "jump" : ["converse","continue"]},
-							"sbqDigest" : { "dialogue" : ["I'd melt you down."], "jump" : ["converse","continue"]},
-							"sbqSoftDigest" : { "dialogue" : ["I'd melt you down, but you'd be fine."], "jump" : ["converse","continue"]}
+							"default" : { "dialogue" : ["Doesn't really do much"]},
+							"sbqHeal" : { "dialogue" : ["You'd be healed."]},
+							"sbqDigest" : { "dialogue" : ["I'd melt you down."]},
+							"sbqSoftDigest" : { "dialogue" : ["I'd melt you down, but you'd be fine."]}
 						}]
 					]
 				}
@@ -938,7 +942,12 @@
 			"analVorePred" : false,
 			"unbirthPred" : false,
 			"cockVorePred" : false,
-			"breastVorePred" : false
+			"breastVorePred" : false,
+
+			"bellyInfusionPred" : false,
+			"cockInfusionPred" : false,
+			"pussyInfusionPred" : false,
+			"breastsInfusionPred" : false
 		},
 
 		// any setting you define above can be modified by a player, this table allows you to define settings a player *cannot* modify, making sure your OC is always in line with your prefrences
