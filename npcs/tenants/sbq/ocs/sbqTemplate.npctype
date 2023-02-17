@@ -50,6 +50,21 @@
 
 		//"uniqueId" : "sbqTemplate", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
 
+		"tenantBio" : { "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [
+			{ "mode" : "vertical" },
+			[
+				//{ "type" : "image", "file" : "/humanoid/sbqTemplate/portraits/neutral.png" },
+				[
+					[ { "type" : "label", "text" : "Age: ??"}, { "type" : "label", "text" : "Gender: ???"} ],
+					[ { "type" : "label", "text" : "Pronouns: ???"}, { "type" : "label", "text" : "Species: ???"} ],
+					{ "type" : "spacer", "size" : 3 },
+					{ "type" : "label", "text" : "A mystery..."},
+					{ "type" : "spacer", "size" : 3 },
+					{ "type" : "label", "text" : "Favorites: being moulded into something else."}
+				]
+			]
+		]},
+
 		"entityPortrait" : true, // set this to true of you want the dialogue box portrait to use the entity's portrait
 		"defaultPortrait" : "bust",
 		// if you want to use specially drawn sprites for dialogue box portraits, remove the two portrait args above, and uncomment the args below
@@ -876,8 +891,52 @@
 						}
 					}
 				}
-			}
+			},
 
+			// when stepping on a character small enough
+			"didSteppy" : {
+				"next" : "race",
+				"default" : { // race
+					"next" : "personality",
+					"default" :{ // personality
+						"next" : "mood",
+						"default" : {
+							"next" : "steppyType", // walking, running, falling
+							"default" : {
+								"randomDialogue" : [ "hehe, whoops!", "Oh did I step on something?", "You tinies need to pay attention more!"]
+							}
+						}
+					}
+				}
+			},
+
+			// when stepped on by a larger character
+			"gotSteppy" : {
+				"next" : "race",
+				"default" : { // race
+					"next" : "personality",
+					"default" :{ // personality
+						"next" : "mood",
+						"default" : {
+							"next" : "steppyType", // walking, running, falling
+							"default" : {
+								"randomDialogue" : [
+									["Ahhh!", "AH!", "oof!", "eep!"],
+									["You stepped on me!", "Watch your step!"],
+									["Be careful where you're <steppyType>!", "Watch where you're <steppyType>!"],
+									["Look out!", "Careful!"]
+								]
+							},
+							"falling" : {
+								"randomDialogue" : [
+									["Ahhh!", "AH!", "oof!", "eep!"],
+									["You're stomping on me!", "I'm getting smushed!", "*wheeze*"]
+								]
+							}
+						}
+					}
+				}
+			}
 		},
 		// when hunting for prey, a checklist to have them only seek out prey that match the settings
 		// any settings not defined in the checlkist for that vore type can be anything
