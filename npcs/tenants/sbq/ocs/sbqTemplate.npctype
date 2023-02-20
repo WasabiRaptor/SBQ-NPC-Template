@@ -421,6 +421,31 @@
 							}
 						}
 					}
+				},
+				"breastsL" : "struggle.breasts",
+				"breastsR" : "struggle.breasts",
+				"breasts" : { // location
+					"next" : "race",
+					"default" : { // race
+						"next" : "personality",
+						"default" : { // personality
+							"next" : "mood",
+							"default" : { // mood
+								"next" : "getLocationEffect",
+								"default" : { "randomDialogue" : [
+									"Having a good time in there?", "Hope its comfortable.", "Get yourself a nice milk bath~",
+									"Feel free to take a drink, don't want to start leaking after all~", "hehe, look at how much bigger they are with you in there~"
+								]},
+								"sbqHeal" : { "randomDialogue" : [ ["Now you're nice and safe.", "Hope you like how it feels in there.", "Just snuggle into the walls~", "Get yourself nice and soaked in my milk~"], {"add":"struggle.location.race.personality.mood.default"} ] },
+								"sbqMilkDigest" : {
+									"next" : "milkDigestImmunity",
+									"false" : { "randomDialogue" : [ "Hehe, seems like I'm going to have a nice batch of milk.", "Let all your worries just melt away~", "Mmmmm can't wait to taste whatever flavor you'll make~" ] },
+									"true" : "struggle.location.race.personality.mood.default"
+								},
+								"sbqMilkSoftDigest" : "struggle.location.race.personality.mood.sbqMilkDigest"
+							}
+						}
+					}
 				}
 			},
 			// when being pred, responses to the prey escaping
