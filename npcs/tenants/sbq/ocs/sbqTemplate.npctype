@@ -1047,7 +1047,7 @@
 
 		// rewards given to the player for doing things for the pred are here! cumulative ones accumulate time between different sessions, otherwise it only counts up per the current session
 		// you can make a reward take both per session time as well as cumulative time!
-		"sbqRewards" : {
+		"sbqPredRewards" : {
 			// Time is in minutes here!
 
 			/*
@@ -1057,19 +1057,31 @@
 				"pool" : "richOre", // the treasure pool this reward gives the player, look up how these are defined, make sure they don't conflict in name
 
 				// per session, resets each time you escape the pred
-				"minTime" : 1, // the minimum amount of time (minutes) in this session before this reward can be obtained (minutes)
+
+				"minTime" : 1, // the minimum amount of time (minutes) in this session before this reward can be obtained
 				"time" : 5, // the amount of time (minutes) needed for this reward to trigger and between each repeat
-				"minStruggles" : 1, // the amount of struggles (seconds) before this reward can be obtained
+				"maxTime" : 10, // the maximum amount of time (minutes) in this session this reward can be obtained at
+
+				"minStruggles" : 1, // the minimum amount of struggles (seconds) before this reward can be obtained
 				"struggles" : 10, // the amount of struggles (seconds) for this reward to trigger between each repeat
+				"maxStruggles" : 1, // the maximum amount of struggles (seconds) in this session this reward can be obtained at
 
 				// cumulative, they never reset, and will continue to count up every time you are in this specific pred
-				"minTimeCumulative" : 1, // the minimum amount of time (minutes) in this session before this reward can be obtained (minutes)
+
+				"minTimeCumulative" : 1, // the minimum amount of time (minutes) before this reward can be obtained
 				"timeCumulative" : 5, // the amount of time (minutes) needed for this reward to trigger and between each repeat
-				"minStrugglesCumulative" : 1, // the amount of struggles (seconds) before this reward can be obtained
-				"strugglesCumulative" : 10 // the amount of struggles (seconds) for this reward to trigger between each repeat
+				"maxTimeCumulative" : 1, // the maximum amount of time (minutes) this reward can be obtained at
+
+				"minStrugglesCumulative" : 1, // the minimum amount of struggles (seconds) before this reward can be obtained
+				"strugglesCumulative" : 10, // the amount of struggles (seconds) for this reward to trigger between each repeat
+				"maxStrugglesCumulative" : 20, // the maximum amount of struggles (seconds) this reward can be obtained at
+
+				"minTimesDigested" : 1, // the minimum amount of times you/the npc must be digested before this reward can be obtained
+				"timesDigested" : 1, // the amount of times you/the npc must be digested for this reward to trigger and between each repeat
+				"maxTimesDigested" : 5, // the maximum amount of times you/the npc can be digested and obtain this reward
+
 			},
 			*/
-
 
 			"timedReward1" : { "repeatable" : true, "time" : 5, "minTime" : 0, "pool" : "money" },
 
@@ -1088,7 +1100,32 @@
 
 			"dayCumulative" : { "repeatable" : true, "timeCumulative" : 1440, "pool" : "highValueQuestRewards" }, // a full day
 			"weekCumulative" : { "repeatable" : true, "timeCumulative" : 10080, "pool" : "highValueQuestRewards" } // a full week
+		},
+		// rewards given to the player for doing things for their prey are here! cumulative ones accumulate time between different sessions, otherwise it only counts up per the current session
+		// you can make a reward take both per session time as well as cumulative time!
+		// reward args are the same as for the pred reward table, but are for the prey being inside you
+		"sbqPreyRewards" : {
+			// Time is in minutes here!
+			"timedReward1" : { "repeatable" : true, "time" : 5, "minTime" : 10, "pool" : "money" },
+
+			"hour3" : { "time" : 180, "pool" : "lowValueQuestRewards" }, // three hours
+			"hour6" : { "time" : 360, "pool" : "mediumValueQuestRewards" }, // six hours
+			"hour12" : { "time" : 720, "pool" : "highValueQuestRewards" }, // twelve hours
+
+			"day1" : { "repeatable" : true, "time" : 1440, "pool" : "highValueQuestRewards" }, // a full day
+
+			"digestedReward1" : { "repeatable" : true, "timesDigested" : 1, "pool" : "money"},
+			"digestedReward2" : { "repeatable" : true, "timesDigested" : 5, "pool" : "lowValueQuestRewards"},
+
+			"hour1Cumulative" : { "timeCumulative" : 60, "pool" : "lowValueQuestRewards" }, // one hour
+			"hour3Cumulative" : { "timeCumulative" : 180, "pool" : "mediumValueQuestRewards" }, // three hours
+			"hour6Cumulative" : { "timeCumulative" : 360, "pool" : "mediumValueQuestRewards" }, // six hours
+			"hour12Cumulative" : { "timeCumulative" : 720, "pool" : "highValueQuestRewards" }, // twelve hours
+
+			"day1Cumulative" : { "repeatable" : true, "timeCumulative" : 1440, "pool" : "highValueQuestRewards" }, // a full day
+			"week1Cumulative" : { "repeatable" : true, "timeCumulative" : 10080, "pool" : "highValueQuestRewards" } // a full week
 		}
+
 
 		// the args below are for randomizing specific settings between possible values in the table when the pred is first summoned, a few examples have been defined
 		// specific OCs will probably have specific prefrences in mind, so you may not want things to randomize at all
