@@ -1056,6 +1056,14 @@
 				"location" : ["belly", "womb", "shaft", "balls", "breasts", "tail"], // whether the counters for this are for a specific location, it adds the timers and counters for all the locations listed in this arg, otherwise its just the overall count/time
 				"pool" : "richOre", // the treasure pool this reward gives the player, look up how these are defined, make sure they don't conflict in name
 
+				"minStruggleFor" : 1, // the minimum amount of time (seconds) a contininious struggle is needed to trigger this reward
+				"struggleFor" : 5, // the amount of time (seconds) a continious struggle is needed for this reward to trigger for each repeat
+				"maxStruggleFor" : 10, // the maximum amount of time (seconds) of a contininious struggle this reward can be obtained at
+
+				"minSinceStruggle" : 1, // the minimum amount of time (seconds) since last struggle is needed to trigger this reward
+				"sinceStruggle" : 5, // the amount of time (seconds) since last struggle is needed for this reward to trigger for each repeat
+				"maxSinceStruggle" : 10, // the maximum amount of time (seconds) since last struggle this reward can be obtained at
+
 				// per session, resets each time you escape the pred
 
 				"minTime" : 1, // the minimum amount of time (minutes) in this session before this reward can be obtained
@@ -1080,6 +1088,15 @@
 				"timesDigested" : 1, // the amount of times you/the npc must be digested for this reward to trigger and between each repeat
 				"maxTimesDigested" : 5, // the maximum amount of times you/the npc can be digested and obtain this reward
 
+				"specialArgs" : { // unique special arguments, would only ever be used if your NPC had custom lua scripting to write some special values
+					"specialArg1":{ // the name of the value in the occupant's visited or cumulative data table to check against
+						"cumulative": true, // used to mark the value is saved in the cumulative data table and to check there
+						"min" : 1, // min value for this reward to trigger
+						"value" : 2, // value for each repeat
+						"max" : 3, // max value for this reward to trigger
+						"mul" : 1 // multiplies the above values when checking against the saved values, for ease of handling things like making your time in minutes rather than seconds
+					}
+				}
 			},
 			*/
 
