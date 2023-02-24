@@ -1054,7 +1054,7 @@
 			"exampleReward" : { // example reward that uses all possible args
 				"repeatable" : true, // whether this reward repeats each time its requirements are met, a 5min reward would repeat at 10min and etc
 				"location" : ["belly", "womb", "shaft", "balls", "breasts", "tail"], // whether the counters for this are for a specific location, it adds the timers and counters for all the locations listed in this arg, otherwise its just the overall count/time
-				"pool" : "richOre", // the treasure pool this reward gives the player, look up how these are defined, make sure they don't conflict in name
+				"pool" : "richOre", // the treasure pool this reward gives the player, look up how these are defined, make sure they don't conflict in name https://starbounder.org/Data:Assets/treasurepools
 
 				"minStruggleFor" : 1, // the minimum amount of time (seconds) a contininious struggle is needed to trigger this reward
 				"struggleFor" : 5, // the amount of time (seconds) a continious struggle is needed for this reward to trigger for each repeat
