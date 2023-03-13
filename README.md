@@ -17,7 +17,7 @@ I would suggest opening the folder within a editor like visual studio code, and 
 
 Within the `humanoid` folder you should now have a template folder for your OC, and a `README` file to explain the specifics of what you may want to edit.
 
-However, if your OC is from an existing race, modded or not, and entirely made using the base sprites from whatever race they are, even with unavailble color options, you can delete this folder, as it would be entirely unnessary for your OC and we can ontinue on.
+However, if your OC is from an existing supported race, modded or not, and entirely made using the base sprites from whatever race they are, even with unavailble color options, you can delete this folder, as it would be entirely unnessary for your OC and we can ontinue on.
 
 ### species
 
@@ -33,7 +33,7 @@ If your OC is a member of an existing species, but uses some custom assets, its 
 
 In the folder `tenants/sbq/ocs` you'll find a `.tenant` file, you'll have to make sure its renamed, and the relevant names and IDs in the file itself are renamed to the correct values, as guided by the comments.
 
-In the folder `npcs/tenants` you should find a file names `sbqTenantCatalogue.json.patch` if you edit this as the comments instruct your tenant will be listed in the selection box for the sbq colony deed.
+In the folder `npcs/tenants` you should find a file named `sbqTenantCatalogue.json.patch` if you edit this as the comments instruct your tenant will be listed in the selection box for the sbq colony deed.
 
 ### Main NPC
 
