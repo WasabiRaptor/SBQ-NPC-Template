@@ -128,6 +128,12 @@
 		}
 	],
 
+	// settings related to anim overrides when its replacing colors for the base parts
+	"animOverrideDefaultSettings" : {
+		"nipples" : false,
+		"visibleNavel" : true
+	},
+
 	// this is the base color map! it isn't anything defined in vanilla, its something specifically used by Anim Overrides and SBQ
 	// you should be defining the colors in your base images here, ordered from darkest to lightest, don't make up colors that don't exist in the sprites!
 	// if a color doesn't exist in the sprite, just use a duplicate entry, first is usually outline, second is usually shading, third is usually the main color, fourth is highlight
