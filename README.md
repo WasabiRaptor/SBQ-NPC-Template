@@ -46,3 +46,17 @@ In the folder `npcs/sbqHub` you'll find another `README` file that will instruct
 The last and most optional step of them all, you can create a house to spawn in the village on Auri's planet, as an example for what sort of items to use to summon them as a tenant
 
 If you want to do this, rename the files in `dungeons/missions/sbqHub` and check the `README` on what else to do, else you can just delete the folder
+
+## Updating an Existing NPC
+
+to update an existing NPC you cna export the dialogue from the old tree into a new file just for the dialouge using a node js script included in the root here
+`node dialoguegen.js npcs/tenants/sbq/ocs/sbqTemplate.npctype`
+
+You should then copy the new dialogue tree scructure, and then rename the labels in the output file to match where you want that dialogue to be used
+
+## Checking if you have any missing dialogue
+
+to check if you have any missing dialogue that is referenced in your dialouge tree you can use this node js script, it will output a file with all the dialogue contexts that your tree has pointed to, but have not been defined in your dialogue file
+`node missingDialogue.js npcs/tenants/sbq/ocs/sbqTemplate.npctype npcs/tenants/sbq/ocs/sbqTemplate.dialogue`
+
+this script doesn't care about dialouge that has a path pointing outside the relevant file, so be aware of that if you are pointing to other files as well

@@ -22,7 +22,7 @@ Scripts added here are used by the dialogue tree when handling `next` steps, as 
 
 This, this will likely be the largest endeavor in making an OC if you don't just want to use the default lines already created.
 
-The `dialogueTree` table contains all the lines the NPC will have relating to vore, or interacting with their dialogue box, you can either define unique lines to your NPC by editing or adding lines to the contexts already there.
+The `dialogueTree` table points to all the lines the NPC will have for various interactions, you can either define unique lines to your NPC by editing or adding lines to the contexts already there, all the dialogue itself should be contained in the `sbqTemplate.dialogue` file
 
 The dialogue tree has multiple starts relating to different contexts, only the start of each part of the tree is pre defined and must be used, after the start, one can delete or change anything about the tree to make it behave as they wish for their NPC, and get as specific in context of a certain vore type as they wish with their lines by checking the current settings.
 
@@ -78,3 +78,10 @@ The general settings for this NPC, while not required as any setting not defined
 ## deleting unecessary parts
 
 If there are any parts of the config here you may feel are unecessary for your NPC, such as parts of the dialogue tree containing lines for things your NPC will not be partaking in, just delete that part of the tree! there should be no consequences as long as you do it correctly, which is why I suggest using an editor such as VSC so you can just collapse the region, and easily see what you have to delete
+
+## Checking if you have any missing dialogue
+
+to check if you have any missing dialogue that is referenced in your dialouge tree you can use this node js script, it will output a file with all the dialogue contexts that your tree has pointed to, but have not been defined in your dialogue file
+`node missingDialogue.js npcs/tenants/sbq/ocs/sbqTemplate.npctype npcs/tenants/sbq/ocs/sbqTemplate.dialogue`
+
+this script doesn't care about dialouge that has a path pointing outside the relevant file, so be aware of that if you are pointing to other files as well
