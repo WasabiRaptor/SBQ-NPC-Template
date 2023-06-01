@@ -59,4 +59,6 @@ You should then copy the new dialogue tree scructure, and then rename the labels
 to check if you have any missing dialogue that is referenced in your dialouge tree you can use this node js script, it will output a file with all the dialogue contexts that your tree has pointed to, but have not been defined in your dialogue file
 `node missingDialogue.js npcs/tenants/sbq/ocs/sbqTemplate.npctype npcs/tenants/sbq/ocs/sbqTemplate.dialogue`
 
+you can optionally add a second dialogue file as another argument, in which it will output that file's dialogue for you, rather than it pointing to your missing dialogue
+
 this script doesn't care about dialouge that has a path pointing outside the relevant file, so be aware of that if you are pointing to other files as well

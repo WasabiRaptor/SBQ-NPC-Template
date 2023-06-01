@@ -279,8 +279,6 @@
 									"dismissTime" : 2
 								},
 								"next" : ["queueVore"],
-								"shy" : {"replace":{"randomDialogue":[":shySelfRequestAnalVoreNoYes"]}},
-								"flirty" : {"replace":{"randomDialogue":[":flirtySelfRequestAnalVoreNoYes"]}},
 								"after" : {
 									"new" : {
 										"randomDialogue" : [":defaultSelfRequestAnalVoreNoYesAfter"],
@@ -358,8 +356,6 @@
 									"dismissTime" : 2
 								},
 								"next" : ["queueVore"],
-								"shy" : {"replace":{"randomDialogue":[":shySelfRequestTailVoreYes"]}},
-								"flirty" : {"replace":{"randomDialogue":[":flirtySelfRequestTailVoreYes"]}},
 								"after" : {
 									"new" : {
 										"randomDialogue" : [":defaultSelfRequestTailVoreYesAfter"],
@@ -552,8 +548,6 @@
 									"dismissTime" : 2
 								},
 								"next" : ["queueVore"],
-								"shy" : {"replace":{"randomDialogue":[":shySelfRequestAbsorbVoreYes"]}},
-								"flirty" : {"replace":{"randomDialogue":[":flirtySelfRequestAbsorbVoreYes"]}},
 								"after" : {
 									"new" : {
 										"randomDialogue" : [":defaultSelfRequestAbsorbVoreYesAfter"],
@@ -669,8 +663,6 @@
 									"dismissTime" : 2
 								},
 								"next" : ["queueVore"],
-								"shy" : {"replace":{"randomDialogue":[":shySelfRequestCockVoreNoYes"]}},
-								"flirty" : {"replace":{"randomDialogue":[":flirtySelfRequestCockVoreNoYes"]}},
 								"after" : {
 									"new" : {
 										"randomDialogue" : [":defaultSelfRequestCockVoreNoYesAfter"],
@@ -695,8 +687,6 @@
 							"locationEffectSlot",
 							"locationCompression"
 						],
-						"shy" : {"replace" : {"randomDialogue" : [":shyDefaultFull"]}},
-						"flirty" : {"replace" : {"randomDialogue" : [":flirtyDefaultFull"]}},
 						"softDigest" : ".digest",
 						"digest" : {
 							"replace" : {"randomDialogue" : [":digestCockVoreFull"]}
@@ -889,8 +879,6 @@
 							"locationEffectSlot",
 							"locationCompression"
 						],
-						"shy" : {"replace" : {"randomDialogue" : [":shyDefaultFull"]}},
-						"flirty" : {"replace" : {"randomDialogue" : [":flirtyDefaultFull"]}},
 						"softDigest" : ".digest",
 						"digest" : {
 							"replace" : {"randomDialogue" : [":digestBreastVoreFull"]}
@@ -1052,10 +1040,10 @@
 					"locationCompression" : { "time" : { "add" : { "randomDialogue" : [":shaftCompressionStruggle"]}}},
 					"locationEnergyDrain" : { "true" : { "add" : { "randomDialogue" : [":shaftEnergyDrainStruggle"]}}},
 					"transforming" : {"true" : {
-						"queueReplace" : {"randomDialogue" : [":transformingStruggle"]},
+						"queueReplace" : {"randomDialogue" : [":cumTransformingStruggle"]},
 						"addQueued" : true,
-						"next" : "transformAllow",
-						"false" : {"queueReplace":{"randomDialogue" : [":transformingStruggleImmune"]}}
+						"next" : "cumTransformAllow",
+						"false" : {"queueReplace":{"randomDialogue" : [":cumTransformingStruggleImmune"]}}
 					}},
 					"eggify" : {"true" : {
 						"queueReplace" : {"randomDialogue" : [":eggifyStruggle"]},
@@ -1090,10 +1078,10 @@
 					"locationCompression" : { "time" : { "add" : { "randomDialogue" : [":ballsCompressionStruggle"]}}},
 					"locationEnergyDrain" : { "true" : { "add" : { "randomDialogue" : [":ballsEnergyDrainStruggle"]}}},
 					"transforming" : {"true" : {
-						"queueReplace" : {"randomDialogue" : [":transformingStruggle"]},
+						"queueReplace" : {"randomDialogue" : [":cumTransformingStruggle"]},
 						"addQueued" : true,
-						"next" : "transformAllow",
-						"false" : {"queueReplace":{"randomDialogue" : [":transformingStruggleImmune"]}}
+						"next" : "cumTransformAllow",
+						"false" : {"queueReplace":{"randomDialogue" : [":cumTransformingStruggleImmune"]}}
 					}},
 					"eggify" : {"true" : {
 						"queueReplace" : {"randomDialogue" : [":eggifyStruggle"]},
@@ -2238,10 +2226,10 @@
 					"locationCompression" : { "time" : { "add" : { "randomDialogue" : [":strugglingShaftCompression"]}}},
 					"locationEnergyDrain" : { "true" : { "add" : { "randomDialogue" : [":strugglingShaftEnergyDrain"]}}},
 					"transforming" : {"true" : {
-						"queueReplace" : {"randomDialogue" : [":strugglingShaftTransforming"]},
+						"queueReplace" : {"randomDialogue" : [":strugglingShaftCumTransforming"]},
 						"addQueued" : true,
-						"next" : "transformAllow",
-						"false" : {"queueReplace":{"randomDialogue" : [":strugglingTransformingImmune"]}}
+						"next" : "cumTransformAllow",
+						"false" : {"queueReplace":{"randomDialogue" : [":strugglingCumTransformingImmune"]}}
 					}},
 					"eggify" : {"true" : {
 						"queueReplace" : {"randomDialogue" : [":strugglingShaftEggify"]},
@@ -2276,10 +2264,10 @@
 					"locationCompression" : { "time" : { "add" : { "randomDialogue" : [":strugglingBallsCompression"]}}},
 					"locationEnergyDrain" : { "true" : { "add" : { "randomDialogue" : [":strugglingBallsEnergyDrain"]}}},
 					"transforming" : {"true" : {
-						"queueReplace" : {"randomDialogue" : [":strugglingBallsTransforming"]},
+						"queueReplace" : {"randomDialogue" : [":strugglingShaftCumTransforming"]},
 						"addQueued" : true,
-						"next" : "transformAllow",
-						"false" : {"queueReplace":{"randomDialogue" : [":strugglingTransformingImmune"]}}
+						"next" : "cumTransformAllow",
+						"false" : {"queueReplace":{"randomDialogue" : [":strugglingCumTransformingImmune"]}}
 					}},
 					"eggify" : {"true" : {
 						"queueReplace" : {"randomDialogue" : [":strugglingBallsEggify"]},

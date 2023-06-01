@@ -6,6 +6,11 @@ let dupes = {}
 
 let npcFile = fs.readFileSync(argv[2], { encoding: "utf-8" });
 let dialogueFile = fs.readFileSync(argv[3], { encoding: "utf-8" });
+let secondaryDialogue
+if (argv[4]) {
+	let secondaryDialogueFile = fs.readFileSync(argv[4], { encoding: "utf-8" });
+	secondaryDialogue = JSONC.parse(secondaryDialogueFile);
+}
 
 let dialogueTree = JSONC.parse(npcFile)?.scriptConfig?.dialogueTree;
 if (!dialogueTree) {
@@ -46,7 +51,9 @@ function checkDialogue(input) {
 			console.log(key)
 			console.log(dialogue[key])
 			if (typeof dialogue[key] == "undefined") {
-				return { [key] : ":missingDialogue" }
+				if (argv[4] && secondaryDialogue[key]) {
+					return { [key]: secondaryDialogue[key] }
+				} else return { [key]: ":missingDialogue" }
 			}
 		}
 	}
