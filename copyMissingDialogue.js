@@ -18,7 +18,7 @@ if (!copyTo) {
 
 for (let [key, child] of Object.entries(copyTo)) {
 	if (child == ":missingDialogue") {
-		copyTo[key] = copyFrom[key]
+		copyTo[key] = copyFrom[key] || copyTo[key]
 	}
 }
 
