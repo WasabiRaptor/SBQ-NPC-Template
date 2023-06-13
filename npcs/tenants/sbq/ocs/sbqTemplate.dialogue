@@ -37,13 +37,19 @@
 		"Nice and filling.",
 		"Not too bad."
 	],
-	"defaultUnpromptedOralVoreBefore": [
-		"I think you'll fill me up.",
-		"I just need a bite to eat.",
+	"defaultUnpromptedOralVoreBefore": [ //blue here, doing some minor edits to exiting 'Unprompted' lines
+		"I think you'll fill me up nicely.",
+		"I just need a quick bite to eat.",
 		"You seem like you'd make a good meal.",
-		"My belly's been grumbling..."
+		"My belly's been grumbling, you look like you'll fill it..."
 	],
-	"defaultUnpromptedOralVoreAfter": ":missingDialogue",
+	"defaultUnpromptedOralVoreAfter": [
+		"Dont mind me! Just grabbing lunch.",
+		"Get comfy in there!",
+		"Mmmhm, you are so filling! seems I nabbed a good one.",
+		"bwuurp! Ah! I'm glad to get to dine on you! very tasty~",
+		"Oh, it's so wonderful eating folks, there's nothing like it!"
+	],
 	"defaultSelfRequestOralVore": {
 		"percentage": "food",
 		"pools": [
@@ -205,19 +211,36 @@
 		"Heh~ it's almost like you're a living dildo.",
 		"Oooh~ That squirming is rather nice."
 	],
-	"defaultSelfRequestAnalVore": ":missingDialogue",
+	"defaultSelfRequestAnalVore": [
+		"You wouldnt mind if I just let myself in, would you?",
+		"Could you do me a favor and bend over?"
+	],
 	"defaultSelfRequestAnalVoreYes": ":missingDialogue",
 	"defaultSelfRequestAnalVoreYesAfter": ":missingDialogue",
 	"defaultSelfRequestAnalVoreNo": ":missingDialogue",
 	"defaultSelfRequestAnalVoreNoYes": ":missingDialogue",
 	"defaultSelfRequestAnalVoreNoYesAfter": ":missingDialogue",
-	"defaultAnalVoreFull": ":missingDialogue",
-	"digestAnalVoreFull": ":missingDialogue",
+	"defaultAnalVoreFull": [
+		"Sorry, hun. All full back here!",
+		"Afraid I couldnt fit another in me!"
+	],
+	"digestAnalVoreFull": [
+		"Wait your turn! Ill get to you soon.",
+		"Just need to make some room for ya. Do you mind waiting a bit?"
+	],
 	"compressionAnalVoreFull": ":missingDialogue",
 	"defaultRequestTailVoreBefore": ":missingDialogue",
 	"defaultRequestTailVoreAfter": ":missingDialogue",
-	"defaultUnpromptedTailVoreBefore": ":missingDialogue",
-	"defaultUnpromptedTailVoreAfter": ":missingDialogue",
+	"defaultUnpromptedTailVoreBefore": [
+		"My tail would like to say hi! let me introduce you head first!",
+		"I've spotted the perfect prey for my tail, now come here.",
+		"Ever seen a tail maw up close? let me show you~"
+	],
+	"defaultUnpromptedTailVoreAfter": [
+		"Oh yeah, you where slurped up real good by my tail! settle in now.",
+		"Mmm, what can I say, you ended up on the wrong side of me, my tail just did it's thing.",
+		"Straight from tail maw to inside me, you slid down it rather smooth!"
+	],
 	"defaultSelfRequestTailVore": ":missingDialogue",
 	"defaultSelfRequestTailVoreYes": ":missingDialogue",
 	"defaultSelfRequestTailVoreYesAfter": ":missingDialogue",
@@ -262,8 +285,16 @@
 	"compressionNavelVoreFull": ":missingDialogue",
 	"defaultRequestAbsorbVoreBefore": ":missingDialogue",
 	"defaultRequestAbsorbVoreAfter": ":missingDialogue",
-	"defaultUnpromptedAbsorbVoreBefore": ":missingDialogue",
-	"defaultUnpromptedAbsorbVoreAfter": ":missingDialogue",
+	"defaultUnpromptedAbsorbVoreBefore": [ // blue here, absorbing time! not very confadent about these lines, tried to keep it vague as to not make it any kind of body absorb (slime, latex, ect..) while making it unque to this vore type
+		"Wanna see a neat trick? I'm about to make you disappear... into me!",
+		"I'm about to surround you completely with my body, just like a blanket!",
+		"Seems you're in need of a hug, let me hug you reeeeal close~"
+	],
+	"defaultUnpromptedAbsorbVoreAfter": [
+		"Mmmh, I wonder if this counts as 'eating' or 'combining', eh, doesn't really matter now.",
+		"Ah, must feel strange to pass into me like that, I know I like the feeling though~",
+		"Life's easy when you can just do that to 'eat' things, ain't that right buddy?"
+	],
 	"defaultSelfRequestAbsorbVore": ":missingDialogue",
 	"defaultSelfRequestAbsorbVoreYes": ":missingDialogue",
 	"defaultSelfRequestAbsorbVoreYesAfter": ":missingDialogue",
@@ -444,6 +475,8 @@
 	"shaftHealStruggle": ":missingDialogue",
 	"shaftCompressionStruggle": ":missingDialogue",
 	"shaftEnergyDrainStruggle": ":missingDialogue",
+	"cumTransformingStruggle": ":missingDialogue",
+	"cumTransformingStruggleImmune": ":missingDialogue",
 	"ballsDefaultStruggle": [
 		"Having a good time in there?",
 		"Keep squirming.",
@@ -775,13 +808,125 @@
 			]
 		]
 	},
-	"defaultForcingPreyTailVore": ":missingDialogue",
-	"defaultForcingPreyAbsorbVore": ":missingDialogue",
-	"defaultForcingPreyNavelVore": ":missingDialogue",
-	"defaultForcingPreyAnalVore": ":missingDialogue",
-	"defaultForcingPreyCockVore": ":missingDialogue",
-	"defaultForcingPreyUnbirth": ":missingDialogue",
-	"defaultForcingPreyBreastVore": ":missingDialogue",
+	"defaultForcingPreyTailVore": {
+		"percentage": "rest",
+		"pools": [
+			[ // 0% - 25%
+				"I see your tail staring, it wants me, and I want it! I'm going in~"
+			],
+			[ // 25% - 50%
+				"Your tail looks peckish, I think I can help with that though, come here~"
+			],
+			[ // 50% - 75%
+				"You got a nice tail maw, I think it deserves a treat, me!"
+			],
+			[ // 75% - 100%
+				"I see your tail maw there... I think I'm going to make myself at home~"
+			]
+		]
+	},
+	"defaultForcingPreyAbsorbVore": {
+		"percentage": "rest",
+		"pools": [
+			[ // 0% - 25%
+				"Get out the way, I'm cannonballing right into your body! Geronimo!!"
+			],
+			[ // 25% - 50%
+				"I want some time inside you buddy, and if I have to slide into you, I will~"
+			],
+			[ // 50% - 75%
+				"Hey uh, don't mind me, just walking to ya, may or may not walk into you~"
+			],
+			[ // 75% - 100%
+				"I think I'm just gonna stroll right into you real quick..."
+			]
+		]
+	},
+	"defaultForcingPreyNavelVore": {
+		"percentage": "rest",
+		"pools": [
+			[ // 0% - 25%
+				"Hey, I'm really wanting in that belly, let me just head butt my way though that belly button~"
+			],
+			[ // 25% - 50%
+				"I'm wanting in that little button, so get ready cause I'm going in~"
+			],
+			[ // 50% - 75%
+				"I'm doing a lint inspection, so let me see that navel, I must be thorough!"
+			],
+			[ // 75% - 100%
+				"You got a good looking belly button there, I think I'll help myself inside."
+			]
+		]
+	},
+	"defaultForcingPreyAnalVore": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"Don't mind me, I'm just going to get myself nice and comfy in your bum~"
+			],
+			[ // 25% - 50%
+				"Hate to make an ass of myself, but I'm going to shove myself up your butt!"
+			],
+			[ // 50% - 75%
+				"You better keep your back to me, cause I'm coming for that booty, and I'll be going in it~"
+			],
+			[ // 75% - 100%
+				"Just bend over for me, I want in that rear badly, and I'm going to get in!"
+			]
+		]
+	},
+	"defaultForcingPreyCockVore": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"I feel an urge to just... take a trip down your rod!"
+			],
+			[ // 25% - 50%
+				"I shall be taking the shaft down, and by shaft I mean your cock~"
+			],
+			[ // 50% - 75%
+				"I feel the pull of your member, it wants me inside it, who am I to deny it?"
+			],
+			[ // 75% - 100%
+				"I desire being in that lewd stick of yours, relax and let me in already!"
+			]
+		]
+	},
+	"defaultForcingPreyUnbirth": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"I have an interest in slipping in those folds of your, let me just..."
+			],
+			[ // 25% - 50%
+				"I want in your crouch taco! I'll be the perfect addition~" //blue here, if this is too much i'll change it, I just thought this line was too great not to try and add!
+			],
+			[ // 50% - 75%
+				"I think I'm going to lewdly spread your legs for a moment, so I can go vag diving!"
+			],
+			[ // 75% - 100%
+				"I'm getting super attracted to your private lips, let me shove my head in there!"
+			]
+		]
+	},
+	"defaultForcingPreyBreastVore": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"I spotted my next resting spot, and it's on your chest!"
+			],
+			[ // 25% - 50%
+				"Those badonkadonks could use a little something, me!" //blue here, I regret nothing.
+			],
+			[ // 50% - 75%
+				"I got a craving for milk, so I think I'll go right to the source!"
+			],
+			[ // 75% - 100%
+				"I can't stop staring at those soft tatas, I must get in them!"
+			]
+		]
+	},
 	"defaultUnwillingPredOralVore": {
 		"percentage": "food",
 		"pools": [
@@ -807,13 +952,181 @@
 			]
 		]
 	},
-	"defaultUnwillingPredTailVore": ":missingDialogue",
-	"defaultUnwillingPredAbsorbVore": ":missingDialogue",
-	"defaultUnwillingPredNavelVore": ":missingDialogue",
-	"defaultUnwillingPredAnalVore": ":missingDialogue",
-	"defaultUnwillingPredCockVore": ":missingDialogue",
-	"defaultUnwillingPredUnbirth": ":missingDialogue",
-	"defaultUnwillingPredBreastVore": ":missingDialogue",
+	"defaultUnwillingPredTailVore": {
+		"percentage": "food",
+		"pools": [
+			[ // 0% - 25%
+				"Was looking at my tail maw drooling really a good excuse to jump in?.. ...",
+				"I know my tail was giving very hungry looks, but ask it's owner before you give it food... or you",
+				"I'd be more upset, but it's past treat time for my tail so I'll let it slide this time."
+			],
+			[ // 25% - 50%
+				"I know my tail has a nice maw, but you should really ask first before letting it have you!",
+				"Darn you, don't just jump into tail maws! but since I was peckish I'll look past it.",
+				"Well it was getting close to treat time... I still don't condone the random feeding though!"
+			],
+			[ // 50% - 75%
+				"Just because my tail was giving you looks doesn't mean it's hungry!... most of the time",
+				"Well I hope you're happy, my greedy tail but won't be letting you out easily...",
+				"Darn it tail, you can't just eat anyone... without me saying so!"
+			],
+			[ // 75% - 100%
+				"I just fed the thing! my tail is far too spoiled for treats...",
+				"oof, now my balance is going to be all messed up darn it!",
+				"W-wah! You can't just jump in tails like that you know?"
+			]
+		]
+	},
+	"defaultUnwillingPredAbsorbVore": {
+		"percentage": "food",
+		"pools": [
+			[ // 0% - 25%
+				"*burp* w-well, I was about to get some food, but it just jumped into me... I suppose you can stay then.",
+				"Mmmm, alright I'll let your sudden invasion of my body slide, since you feel good in there and fill me up.",
+				"If I wasn't so hungry I would be more upset that you dived inside me... probably..."
+			],
+			[ // 25% - 50%
+				"I can't believe you just did that, and that I'm not upset about... just ask before you're absorbed next time?",
+				"Well I understand your eagerness, I feel like you should have said asked before leaping into me",
+				"Okay then... while I might be a little peckish, people sinking into me without warning is still strange!"
+			],
+			[ // 50% - 75%
+				"I'm not a darn sponge! please don't jump into me randomly just cause you can... anyway get comfy",
+				"While it did feel nice having surrounded you like this, I'd rather be ask first",
+				"I find this uh, sudden dive you made unprompted!... but not entirely unwanted I guess?"
+			],
+			[ // 75% - 100%
+				"W-wah! how dare you, you can't just sink into me like that, ask first!",
+				"H-hey, well shoot, this is the down side to being semi-solid...", // blue here, it's only now that I relised I may be treating absorbion wrong, tell me if I need to change this or simular!
+				"what the heck! just cause you can walk into me, don't mean you should!"
+			]
+		]
+	},
+	"defaultUnwillingPredNavelVore": {
+		"percentage": "food",
+		"pools": [
+			[ // 0% - 25%
+				"Huh, this was not asked for, but not unwelcomed entirely, still though, ask first please!",
+				"I know that I looked like I was starving, and I was hungry, but give some heads up next time darn it!",
+				"Ugh... well diner is canceled now that you've jumped into my navel, so that's good at least."
+			],
+			[ // 25% - 50%
+				"I have to wonder why this keeps going on! it fills me up but it's so strange it keeps happening!",
+				"I lift my shirt up a sec and people are running into my button, I was looking for snack so it's cool, but still!",
+				"Listen here, just because you hear my belly lightly rumble don't mean to hop right into my navel, come on now!"
+			],
+			[ // 50% - 75%
+				"Well, unexpected but I guess this is how today's going, ask before you leap and all that...",
+				"I'm going to need to get a belly button guard if this keeps up!",
+				"I can't even, it's quite rude to just shove yourself down another's navel without notice!.. yes you can stay..."
+			],
+			[ // 75% - 100%
+				"Of all the things I expected today, someone jumping into my belly button was not one of them!",
+				"I'm sorry but why did you enter my belly button out of the blue? was it really that appealing?",
+				"Whoa! I didn't need you to stuff yourself in my navel like that... dang it!"
+			]
+		]
+	},
+	"defaultUnwillingPredAnalVore": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"*sigh* Well I should have expected this when you came running while looking at my booty.",
+				"I can't even bend down to pick something up without someone flying into my ass!", //blue here, this line makes me laugh, I don't know why!
+				"Did... did you really just, shove yourself up my butt!?"
+			],
+			[ // 25% - 50%
+				"I don't know why you felt like just plunging into my ass like that, but hey, I'm not going to complain",
+				"If your trying to brown nose me by going up my rear... it's sorta working?",
+				"I uh... don't know what to tell you, don't jump into people's butts unannounced?"
+			],
+			[ // 50% - 75%
+				"You a cave explorer or something? since you dived into my butt? well explore I suppose then.",
+				"Your lucky I'm sorta in the mood for something being shove up my rear, so I won't mind you there.",
+				"Do you go up peoples back doors randomly often? or I'm I just special?"
+			],
+			[ // 75% - 100%
+				"If I wasn't so needy right now, I'd be way more upset! now get to wiggling in my rear!",
+				"You caught me in a good mood, so if you behave yourself in my ass I'll let you stay",
+				"You better not make random butt diving a habit! but you do feel really good up there."
+			]
+		]
+	},
+	"defaultUnwillingPredCockVore": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"Did you just... put yourself in my cock!? how lewd of you!",
+				"My day's barely started and someone's done dived into my shaft, Mondays am I right?", //blue here, i'd like to think my bits of humer is nice in modertion, but if it does not fit the vibe i'll change it
+				"You know, you're supposed to ask first before you hop into someone's cock..."
+			],
+			[ // 25% - 50%
+				"Well ain't you a 'cocky' little guy, because your so bold I'll let you be for the moment",
+				"Jeez, a little warning before you just push yourself down my rod would be appreciated!",
+				"Hmm, maybe I should start wearing pants more if I don't want cock divers in randomly, hmm..."
+			],
+			[ // 50% - 75%
+				"I'm displeased at your random shoving in... but you do feel good in my shaft, so I'll let slide this time.",
+				"I was just getting a bit aroused, so I won't make you leave my cock, but could you warn me next time?",
+				"I'm not sure if I'm lucky or unlucky, but I'll make the most of your spontaneous dick dive today"
+			],
+			[ // 75% - 100%
+				"You got in my shaft so easily, I must be more lustful then I thought, well I suppose I'll let you stay then",
+				"Just because I was rock hard, doesn't mean it's an invite to being in my rod... you do feel good though.",
+				"Maybe I was looking quite horny, but you still should ask first darn it! ah well, enjoy it I guess..."
+			]
+		]
+	},
+	"defaultUnwillingPredUnbirth": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"H-hey, throwing yourself up my snatch without a word is rude! ask next time.",
+				"My folds aren't a pool, you can't just dive in whenever you know!",
+				"I understand you're excited, but try to control yourself! you can't be jumping into vags like that!"
+			],
+			[ // 25% - 50%
+				"Hey! if you where cold I could've just snuggled you, no need to hop into my womb!",
+				"Is it too much to ask for a heads up before you shove your head into my folds?",
+				"I get that you wanted in, but don't you think just forcing your way in my vag was a bit much?"
+			],
+			[ // 50% - 75%
+				"Well here we are, with you sneaking into my womb, you feel good so I'll let it slide this time.",
+				"While I'm liking this pleasure, I would like warning before you just enter my folds.",
+				"I was feeling a bit of heat, so you being up my vag is welcomed, but still, could you ask first?"
+			],
+			[ // 75% - 100%
+				"Was I looking that lustful that you went ahead into my folds? I guess so...",
+				"You went in my vag so smoothly! I must be rather horny, thanks but try to warn me next time.",
+				"Wow you feel good in there, I'll let your little unannounced dive into my womb slide do to this..."
+			]
+		]
+	},
+	"defaultUnwillingPredBreastVore": {
+		"percentage": "horny",
+		"pools": [
+			[ // 0% - 25%
+				"W-wah! you just dived right in my nipple huh? without any notice...",
+				"What the heck, you can't just shove yourself into my boob like, like you own them!",
+				"Well, gonna have to balance myself with you in my rack now, not expecting this today"
+			],
+			[ // 25% - 50%
+				"While my jugs might look soft, don't mean you can just decide to push into them!",
+				"When you where coming to me, I expected a hug! instead now you're in my breast!",
+				"I should've known this would happen when I saw you staring at my rack..."
+			],
+			[ // 50% - 75%
+				"Even though you're uninvited in my jugs, I'll let you stay in them since I like the feeling...",
+				"Is my boobs so snuggle-able that people wanna just jump in? or are you just an edge case?",
+				"Huh, while I don't condone people just plunging into my nipples, you get a pass on feeling good in there."
+			],
+			[ // 75% - 100%
+				"You just throw yourself right in my jugs! I certainly won't turn this down, but wow!",
+				"I am in so much lust, I'll forgive your unwarranted invasion into my rack if you behave now.",
+				"You got me at a good time, I'll let your booby slip in slide since you're pleasant to have there."
+			]
+		]
+	},
 	"struggling": [
 		[
 			"I'm stuck here aren't I?",
@@ -950,7 +1263,8 @@
 	"strugglingShaftHeal": ":missingDialogue",
 	"strugglingShaftCompression": ":missingDialogue",
 	"strugglingShaftEnergyDrain": ":missingDialogue",
-	"strugglingShaftTransforming": ":missingDialogue",
+	"strugglingShaftCumTransforming": ":missingDialogue",
+	"strugglingCumTransformingImmune": ":missingDialogue",
 	"strugglingShaftEggify": ":missingDialogue",
 	"strugglingBalls": [
 		"All this cum sloshing around me~",
@@ -963,11 +1277,6 @@
 	"strugglingBallsHeal": ":missingDialogue",
 	"strugglingBallsCompression": ":missingDialogue",
 	"strugglingBallsEnergyDrain": ":missingDialogue",
-	"strugglingBallsTransforming": [
-		"It feels kinda weird in here?",
-		"I think... I think I'm turning white?",
-		"I think... I'm starting to feel goopy?"
-	],
 	"strugglingBallsEggify": ":missingDialogue",
 	"strugglingBreasts": [
 		"It's really soft in here...",
@@ -1006,9 +1315,7 @@
 	"voredNavelVore": ":missingDialogue",
 	"voredAbsorbVore": ":missingDialogue",
 	"voredCockVore": [
-		"Ahh... its so tight!",
-		"Ohmygosh",
-		"Ahh~"
+		"UwU"
 	],
 	"voredUnbirth": ":missingDialogue",
 	"voredBreastVore": ":missingDialogue",
@@ -1119,23 +1426,53 @@
 		"I think... I need you in my belly... or... as my belly"
 	],
 	"infuseUnpromptedBellyBeforeLayer": ":missingDialogue",
-	"infuseUnpromptedBellyAfter": ":missingDialogue",
+	"infuseUnpromptedBellyAfter": [
+		"Im sure you wont mind being a part of me for awhile, huh?",
+		"Lets be honest, you look a lot cuter this way.",
+		"What was their name again? Oh well."
+	],
 	"infuseUnpromptedBellyAfterLayer": ":missingDialogue",
-	"infuseSelfRequestBellyBefore": ":missingDialogue",
+	"infuseSelfRequestBellyBefore": [
+		"Youre gonna love it down there, I guarantee it!",
+		"Let's be honest, you look a lot cuter this way.",
+		"You wont regret being a part of me!"
+	],
 	"infuseSelfRequestBellyBeforeLayer": ":missingDialogue",
-	"infuseSelfRequestBellyAfter": ":missingDialogue",
+	"infuseSelfRequestBellyAfter": [
+		"Got you all to myself, now!",
+		"Enjoy your stay down there!",
+		"What was their name again? Oh well.",
+		"Uuuurhp!"
+	],
 	"infuseSelfRequestBellyAfterLayer": ":missingDialogue",
-	"infuseRequestTailBefore": ":missingDialogue",
+	"infuseRequestTailBefore": [
+		"Looking to be a part of my tail, huh? Cant say I blame you!",
+		"Youre gonna make a nice bit of extra length!",
+		"Knew you were staring at my tail for a reason!"
+	],
 	"infuseRequestTailBeforeLayer": ":missingDialogue",
-	"infuseRequestTailAfter": ":missingDialogue",
+	"infuseRequestTailAfter": [
+		"Looking good back there, <entityname>!",
+		"All a part of me, now!"
+	],
 	"infuseRequestTailAfterLayer": ":missingDialogue",
-	"infuseUnpromptedTailBefore": ":missingDialogue",
+	"infuseUnpromptedTailBefore": [
+		"Might as well keep you back there, since you squirmed so nicely!",
+		"Think youll look good as part of my tail. Wouldnt you agree?"
+	],
 	"infuseUnpromptedTailBeforeLayer": ":missingDialogue",
-	"infuseUnpromptedTailAfter": ":missingDialogue",
+	"infuseUnpromptedTailAfter": [
+		"Looking good back there!",
+		"What was their name again? <entityname>?"
+	],
 	"infuseUnpromptedTailAfterLayer": ":missingDialogue",
 	"infuseSelfRequestTailBefore": ":missingDialogue",
 	"infuseSelfRequestTailBeforeLayer": ":missingDialogue",
-	"infuseSelfRequestTailAfter": ":missingDialogue",
+	"infuseSelfRequestTailAfter": [
+		"Looking good back there, <entityname>!",
+		"All a part of me, now! Hope you enjoy the stay!",
+		"Got you all to myself, now!"
+	],
 	"infuseSelfRequestTailAfterLayer": ":missingDialogue",
 	"infuseRequestBreastsBefore": [
 		"You want to be my boobs?",
@@ -1189,9 +1526,18 @@
 		"Mmm~ feels right to have you there~"
 	],
 	"infuseUnpromptedPussyAfterLayer": ":missingDialogue",
-	"infuseSelfRequestPussyBefore": ":missingDialogue",
+	"infuseSelfRequestPussyBefore": [
+		"You're going to look good as my pussy.",
+		"Mm, can't wait to feel you soaking me down there.",
+		"You really want to give yourself entirely to me?",
+		"Get comfy, dear. Youre going to be here awhile~"
+	],
 	"infuseSelfRequestPussyBeforeLayer": ":missingDialogue",
-	"infuseSelfRequestPussyAfter": ":missingDialogue",
+	"infuseSelfRequestPussyAfter": [
+		"I can already feel you dripping down there~",
+		"Mmhm, maybe I need to put you to good use.",
+		"You feel so wet and sensitive! Glad to have you where you belong, <entityname>~"
+	],
 	"infuseSelfRequestPussyAfterLayer": ":missingDialogue",
 	"infuseRequestShaftBefore": [
 		"You want to be my cock?",
@@ -1265,7 +1611,11 @@
 			"<love>^#ffffff7f;(<keysmash>)"
 		]
 	],
-	"infusedTail": ":missingDialogue",
+	"infusedTail": [
+		"<slowlove>^#ffffff7f;(I belong back here~)",
+		"<slowlove>^#ffffff7f;(Back and forth. Back and forth. Just a tail now~)",
+		"<slowlove>^#ffffff7f;(I belong back here... just a part of <entityname>~)"
+	],
 	"infusedPussy": [
 		"<slowlove>",
 		"<love>",
@@ -1325,7 +1675,11 @@
 		"Hehe, does my belly want something?",
 		"Hehe, do you want something <infusedName>?"
 	],
-	"teaseInfusedTail": ":missingDialogue",
+	"teaseInfusedTail": [
+		"I can still feel you back there~",
+		"I can still feel you back there, <entityname>~",
+		"Looking good back there, <entityname>!"
+	],
 	"teaseInfusedPussy": [
 		[
 			"<slowlove>Ahh, I'm so much more sensitive with you down there~",
