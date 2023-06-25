@@ -24,10 +24,14 @@ if (!dialogue) {
 }
 
 let out = handle([], dialogueTree);
+JSONC.assign(out, { ["vanilla"]: dialogue.vanilla })
+delete dialogue["vanilla"]
+
 let output = JSONC.stringify(out, null, "\t");
-let unused = JSONC.stringify(dialogue, null, "\t");
-fs.writeFileSync(argv[3] + ".out", output, { encoding: "utf-8" });
-fs.writeFileSync(argv[3] + ".unused", unused, { encoding: "utf-8" });
+JSONC.assign(dialogue, JSONC.parse(`{\n// Unused Dialogue \n}`));
+let unusedDialogue = JSONC.stringify(dialogue, null, "\t")
+
+fs.writeFileSync(argv[3], output.replace(/\n\}$/, ",") + unusedDialogue.replace(/^\{/, ""), { encoding: "utf-8" });
 
 
 function handle(path, dialogueTree1) {
