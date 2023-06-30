@@ -1,9 +1,7 @@
 {
 	"type": "sbqCrewTemplate",
 	"baseType": "sbqTemplate",
-	"dropPools": [
-		"villagertreasure"
-	],
+
 	"damageTeamType": "friendly",
 	// Remove protection and powermultiplier gained from being level 1 as scaling is from player armor
 	"innateStatusEffects": [
@@ -20,7 +18,7 @@
 	"scriptConfig": {
 		"behavior": "sbqvorecrewmember",
 		"behaviorConfig": {
-			"emptyHands": true,
+			//"emptyHands": true, // only set this as true if your NPC doesn't have a secondary set of weapons
 			// Wander behavior config
 			"wanderTime": 1,
 			"idleTime": 10,

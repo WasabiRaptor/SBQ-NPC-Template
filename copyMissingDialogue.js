@@ -15,10 +15,23 @@ if (!copyTo) {
 	console.log("error reading " + argv[3]);
 	process.exit(1)
 }
+let dialogueHashes = {}
 
 for (let [key, child] of Object.entries(copyTo)) {
 	if (child == ":missingDialogue") {
 		copyTo[key] = copyFrom[key] || copyTo[key]
+	} else {
+		if (Array.isArray(child)) {
+			dialogueHashes[JSONC.stringify(child, null, "\t")] = key
+		}
+	}
+}
+for (let [key, child] of Object.entries(copyFrom)) {
+	if (Array.isArray(child)) continue
+	if (typeof (child) == "string") continue
+	let hash = JSONC.stringify(child.randomDialogue || child.dialogue, null, "\t")
+	if (dialogueHashes[hash]) {
+		copyTo[dialogueHashes[hash]] = child
 	}
 }
 
