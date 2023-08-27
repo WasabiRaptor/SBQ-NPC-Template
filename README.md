@@ -49,7 +49,7 @@ If you want to do this, rename the files in `dungeons/missions/sbqHub` and check
 
 ## Updating an Existing NPC
 
-to update an existing NPC you cna export the dialogue from the old tree into a new file just for the dialouge using a node js script included in the root here
+to update an existing NPC you can export the dialogue from the old tree into a new file just for the dialouge using a node js script included in the root here
 `node dialoguegen.js npcs/tenants/sbq/ocs/sbqTemplate.npctype`
 
 You should then copy the new dialogue tree scructure, and then rename the labels in the output file to match where you want that dialogue to be used
