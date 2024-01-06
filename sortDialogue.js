@@ -24,7 +24,9 @@ if (!dialogue) {
 }
 
 let out = handle([], dialogueTree);
-JSONC.assign(out, { ["vanilla"]: dialogue.vanilla })
+checkRepoint(out)
+let vanilla = (dialogue?.vanilla ?? {})
+JSONC.assign(out, { ["vanilla"]: vanilla })
 delete dialogue["vanilla"]
 
 let output = JSONC.stringify(out, null, "\t");
@@ -47,6 +49,16 @@ function handle(path, dialogueTree1) {
 		JSONC.assign(out, handle([...path, key], child));
 	}
 	return out;
+}
+
+function checkRepoint(input) {
+	for (let [key, child] of Object.entries(input)) {
+		if (typeof child == "string") {
+			if ((child.substring(0, 1) == ":") && child != ":missingDialogue") {
+				JSONC.assign(input, JSONC.parse(`{\n "${key}": "${child}" // duplicated lines\n }`));
+			}
+		}
+	}
 }
 
 function checkDialogue(input) {
