@@ -1,3 +1,6 @@
+WARNING! using the NPC template as it is currently will not be compatible with versions of SBQ past 2.8 please wait for it to be updated before working on any NPCs
+
+
 # SBQ-NPC-Template
 a template for adding NPCs to the starbecue mod
 
