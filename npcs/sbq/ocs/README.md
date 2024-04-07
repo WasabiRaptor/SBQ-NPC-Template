@@ -12,11 +12,11 @@ If you've created a player character and you want to use their appearance for an
 
 This is a must if you don't want to have multiple instances of the same character around, it should be replaced with the ID of your NPC, if not, do that now.
 
-## dialogueBoxScripts
+## dialogueStepScripts
 
-If you want to have scripts for custom behavior for the dialogue tree and dialoguebox, add some scripts to the `dialogueBoxScripts` arg.
+If you want to have scripts for custom behavior for the dialogue tree and dialoguebox, add some scripts to the `dialogueStepScripts` arg.
 
-Scripts added here are used by the dialogue tree when handling `next` steps, as well as the `callScript` arg for when conversing with the dialogue box.
+Scripts added here are used by the dialogue tree when handling `next` steps
 
 ## dialogueTree
 
@@ -82,6 +82,6 @@ If there are any parts of the config here you may feel are unecessary for your N
 ## Checking if you have any missing dialogue
 
 to check if you have any missing dialogue that is referenced in your dialouge tree you can use this node js script, it will output a file with all the dialogue contexts that your tree has pointed to, but have not been defined in your dialogue file
-`node missingDialogue.js npcs/tenants/sbq/ocs/sbqTemplate.npctype npcs/tenants/sbq/ocs/sbqTemplate.dialogue`
+`node missingDialogue.js npcs/sbq/ocs/sbqTemplate.npctype npcs/sbq/ocs/sbqTemplate.dialogue`
 
 this script doesn't care about dialouge that has a path pointing outside the relevant file, so be aware of that if you are pointing to other files as well

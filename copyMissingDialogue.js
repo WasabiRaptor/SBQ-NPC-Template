@@ -29,7 +29,7 @@ for (let [key, child] of Object.entries(copyTo)) {
 for (let [key, child] of Object.entries(copyFrom)) {
 	if (Array.isArray(child)) continue
 	if (typeof (child) == "string") continue
-	let hash = JSONC.stringify(child.randomDialogue || child.dialogue, null, "\t")
+	let hash = JSONC.stringify(child.dialogueRandom || child.dialogue, null, "\t")
 	if (dialogueHashes[hash]) {
 		copyTo[dialogueHashes[hash]] = child
 	}

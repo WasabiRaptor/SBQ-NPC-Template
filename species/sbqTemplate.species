@@ -1,20 +1,16 @@
 {
 	"kind" : "sbqTemplate",
 
-	"speciesAnimOverride" : "speciesAnimOverride.config", // this tells it which anim override file to use
-
 	"charCreationTooltip" : {
-			"title" : "Template",
-			"subTitle" : "The potential for vore.",
-			"description" : "Are you sure you're supposed to be able to read this?"
+		"title" : "Template",
+		"subTitle" : "The potential for vore.",
+		"description" : "Are you sure you're supposed to be able to read this?"
 	},
 
-	"nameGen" : [ "/species/humanmalenamegen.config:names", "/species/humanfemalenamegen.config:names" ],
-
+	"nameGen" : [ "/species/sbqTemplate_namegen.config:names", "/species/sbqTemplate_namegen.config:names" ], // first one is for male, second is for female
 
 	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
-
 
 	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "HUMAN", "Personality" ],
 	"skull" : "/humanoid/human/dead.png",
@@ -128,24 +124,6 @@
 		}
 	],
 
-	// settings related to anim overrides when its replacing colors for the base parts
-	"animOverrideDefaultSettings" : {
-		"nipples" : false,
-		"visibleNavel" : true
-	},
-
-	// this is the base color map! it isn't anything defined in vanilla, its something specifically used by Anim Overrides and SBQ
-	// you should be defining the colors in your base images here, ordered from darkest to lightest, don't make up colors that don't exist in the sprites!
-	// if a color doesn't exist in the sprite, just use a duplicate entry, first is usually outline, second is usually shading, third is usually the main color, fourth is highlight
-	// you should *always* have a primary, secondary, you can define any others you want but they'll only be relevant if you use them later down the line
-	// flesh is probably safe to make up if it isn't defined in the sprite, it isn't required but I'd reccommend making a map for it
-	"baseColorMap" : {
-		"primary" : ["c7815b", "d39c6c", "ffc181", "ffe2c5"],
-		"secondary" : ["951500", "be1b00", "dc1f00", "f32200"],
-		"hair" : ["735e3a", "a38d59", "d9c189", "f7e7b2"],
-		"flesh" : ["702c55", "8b3c6c", "a94783"]
-	},
-
 	// These are the tables for the replace colors, if your sprites neeed to have their colors replaced, you should probably define those colors here
 	"bodyColor" : [
 		{ "ffe2c5" : "ab8c77", "ffc181" : "86644a", "d39c6c" : "684431", "c7815b" : "40271d" }
@@ -155,5 +133,79 @@
 	],
 	"hairColor" : [
 		{ "d9c189" : "E86D46", "a38d59" : "D1422E", "735e3a" : "96201B" }
+	],
+
+	// SBQ Config stuff
+	// everything below is Starbecue and SBQ-engine specific configuration, if they *need* anything below to appear as they should, the NPC cannot be used with vanilla starbound
+
+	// you should be defining the colors in your base images here, ordered from darkest to lightest, don't make up colors that don't exist in the sprites!
+	// if a color doesn't exist in the sprite, just use a duplicate entry, first is usually outline, second is usually shading, third is usually the main color, fourth is highlight
+	// you should *always* have a "primary" and "secondary" color which gets used for applying to infused parts or objects
+	// you can define any others you want but they'll only be relevant if you use them later down the line
+	// flesh is probably safe to make up if it isn't defined in the sprite, it isn't required but I'd reccommend making a map for it
+	"baseColorMap" : {
+		"primary" : ["c7815b", "d39c6c", "ffc181", "ffe2c5"],
+		"secondary" : ["951500", "be1b00", "dc1f00", "f32200"],
+		"hair" : ["735e3a", "a38d59", "d9c189", "f7e7b2"],
+		"flesh" : ["702c55", "8b3c6c", "a94783"]
+	},
+
+	// this is for remapping the colors to global tags in the species' animation, this is only important when one is using the
+	// base sprites in SBQ for vore animations, if you're using your own, you can just not use any of this
+	"colorRemapGlobalTags" : {
+		"bellyColorRemap" : [
+			// this is an example for how ot just remap a color's hex code directly based on the value of a setting in SBQ
+			{"a94783":"d39c6c", "check" : {"visibleNavel":true}},
+			{"a94783":"ffc181", "check" : {"visibleNavel":false}},
+			//this is an example of just remapping a color pallette from one to another
+			["primary","primary"]
+		],
+		"cockColorRemap" : [
+			["primary","primary"]
+		],
+		"pussyColorRemap" : [
+			["flesh","flesh"]
+		],
+		"ballsColorRemap" : [
+			["primary","primary"]
+		],
+		"breastsColorRemap" : [
+			["primary","primary"],
+			// here's an example of remapping a color to another defined palette but the thrid arg being the settings to check first
+			["flesh","flesh", {"visibleNipples":true}],
+			["flesh","primary", {"visibleNipples":false}]
+		]
+	},
+
+	// the voreConfig defines everything this species can do with the SBQ controller and most other actions
+	// basically this is an array of configs, each subsequent table is merged over the previous one
+	// there will be a more in depth explaination of what all is here in another template created at a later date
+	"voreConfig" : [
+		"/humanoid/any/vore.config", // basic actions and capabilities most any species can have, only remove this if you know what you're doing
+
+		// configs meant to be quick shortcuts to overriding all of a certain setting as false
+		// such as if one wanted to make sure their species/OC was never depicted as prey simply uncomment that line
+		// "/humanoid/any/disableAllVorePred.config",
+		// "/humanoid/any/disableAllVorePrey.config",
+		// "/humanoid/any/disableAllTF.config",
+		// "/humanoid/any/disableAllSize.config",
+
+		// the final table containing everything specific to this species
+		{
+			"defaultSettings" : {
+				"visibleNavel" : true
+			},
+			"overrideSettings" : {
+			}
+		}
+	],
+
+	// custom animation! a feature implemented into the SBQ-Engine specifically to allow for races to be more in line with how the rest of the game
+	// the simple explaination is, races can be animated the same as everything else in the game now with their .animation files
+	// the caveat to that is there are a few parts and states that are still handled engine side, such as emotes and the body state
+	"animationCustom" : [
+		"/humanoid/any/humanoidPred.animation", // the basic vore animations needed by a basic humanoid race
+		"/humanoid/any/voreOccupants.animation" // the basic occupant animations needed
 	]
+
 }

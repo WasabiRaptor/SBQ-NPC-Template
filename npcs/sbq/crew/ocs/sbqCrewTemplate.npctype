@@ -45,7 +45,7 @@
 			"ranks": [
 				"Hungriest <role>"
 			],
-			"defaultUniform": {
+			"uniform": {
 				"chest": "protectoratechest",
 				"legs": "protectoratepants"
 			},

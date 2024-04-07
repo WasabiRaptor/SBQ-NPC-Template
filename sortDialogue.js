@@ -39,8 +39,8 @@ fs.writeFileSync(argv[3], output.replace(/\n\}$/, ",") + unusedDialogue.replace(
 function handle(path, dialogueTree1) {
 	//console.log(path);
 	let out = {}
-	if (dialogueTree1.randomDialogue || dialogueTree1.dialogue) {
-		JSONC.assign(out, checkDialogue((dialogueTree1.randomDialogue || dialogueTree1.dialogue)));
+	if (dialogueTree1.dialogueRandom || dialogueTree1.dialogue) {
+		JSONC.assign(out, checkDialogue((dialogueTree1.dialogueRandom || dialogueTree1.dialogue)));
 	}
 	for (let [key, child] of Object.entries(dialogueTree1)) {
 		if (key == "next") continue;
