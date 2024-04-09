@@ -70,7 +70,7 @@
 		"Mmmhm, you are so filling! seems I nabbed a good one.",
 		"bwuurp! Ah~ you make for some nice 'fine dining' heh"
 	],
-	"oralVoreSelfRequest": {
+	"oralVorePrompt": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -95,7 +95,7 @@
 			]
 		]
 	},
-	"oralVoreSelfRequestYes": {
+	"oralVorePromptYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -120,7 +120,7 @@
 			]
 		]
 	},
-	"oralVoreSelfRequestYesAfter": {
+	"oralVorePromptYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -137,7 +137,7 @@
 			]
 		]
 	},
-	"oralVoreSelfRequestNo": {
+	"oralVorePromptNo": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -154,7 +154,7 @@
 			]
 		]
 	},
-	"oralVoreSelfRequestNoYes": {
+	"oralVorePromptNoYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -171,7 +171,7 @@
 			]
 		]
 	},
-	"oralVoreSelfRequestNoYesAfter": {
+	"oralVorePromptNoYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -257,7 +257,7 @@
 		"Heh~ it's almost like you're a living sex toy.",
 		"Oooh~ That squirming is rather nice."
 	],
-	"analVoreSelfRequest": {
+	"analVorePrompt": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -274,7 +274,7 @@
 			]
 		]
 	},
-	"analVoreSelfRequestYes": {
+	"analVorePromptYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -291,7 +291,7 @@
 			]
 		]
 	},
-	"analVoreSelfRequestYesAfter": {
+	"analVorePromptYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -308,7 +308,7 @@
 			]
 		]
 	},
-	"analVoreSelfRequestNo": {
+	"analVorePromptNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -325,7 +325,7 @@
 			]
 		]
 	},
-	"analVoreSelfRequestNoYes": {
+	"analVorePromptNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -342,7 +342,7 @@
 			]
 		]
 	},
-	"analVoreSelfRequestNoYesAfter": {
+	"analVorePromptNoYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -439,7 +439,7 @@
 			]
 		]
 	},
-	"tailVoreSelfRequest": {
+	"tailVorePrompt": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -456,7 +456,7 @@
 			]
 		]
 	},
-	"tailVoreSelfRequestYes": {
+	"tailVorePromptYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -473,7 +473,7 @@
 			]
 		]
 	},
-	"tailVoreSelfRequestYesAfter": {
+	"tailVorePromptYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -490,7 +490,7 @@
 			]
 		]
 	},
-	"tailVoreSelfRequestNo": {
+	"tailVorePromptNo": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -507,7 +507,7 @@
 			]
 		]
 	},
-	"tailVoreSelfRequestNoYes": {
+	"tailVorePromptNoYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -524,7 +524,7 @@
 			]
 		]
 	},
-	"tailVoreSelfRequestNoYesAfter": {
+	"tailVorePromptNoYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -577,7 +577,7 @@
 		"Not bothering with anything else, straight to the belly.",
 		"Oooh~ Thats a stretch."
 	],
-	"navelVoreSelfRequest": {
+	"navelVorePrompt": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -594,7 +594,7 @@
 			]
 		]
 	},
-	"navelVoreSelfRequestYes": {
+	"navelVorePromptYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -611,7 +611,7 @@
 			]
 		]
 	},
-	"navelVoreSelfRequestYesAfter": {
+	"navelVorePromptYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -628,7 +628,7 @@
 			]
 		]
 	},
-	"navelVoreSelfRequestNo": {
+	"navelVorePromptNo": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -645,7 +645,7 @@
 			]
 		]
 	},
-	"navelVoreSelfRequestNoYes": {
+	"navelVorePromptNoYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -662,7 +662,7 @@
 			]
 		]
 	},
-	"navelVoreSelfRequestNoYesAfter": {
+	"navelVorePromptNoYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -709,7 +709,7 @@
 		"Ah, must feel strange to pass into me like that, I know I like the feeling though~",
 		"Life's easy when you can just do that to 'eat' things, ain't that right buddy?"
 	],
-	"absorbVoreSelfRequest": {
+	"absorbVorePrompt": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -726,7 +726,7 @@
 			]
 		]
 	},
-	"absorbVoreSelfRequestYes": {
+	"absorbVorePromptYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -743,7 +743,7 @@
 			]
 		]
 	},
-	"absorbVoreSelfRequestYesAfter": {
+	"absorbVorePromptYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -760,7 +760,7 @@
 			]
 		]
 	},
-	"absorbVoreSelfRequestNo": {
+	"absorbVorePromptNo": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -777,7 +777,7 @@
 			]
 		]
 	},
-	"absorbVoreSelfRequestNoYes": {
+	"absorbVorePromptNoYes": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -794,7 +794,7 @@
 			]
 		]
 	},
-	"absorbVoreSelfRequestNoYesAfter": {
+	"absorbVorePromptNoYesAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -908,7 +908,7 @@
 			]
 		]
 	},
-	"cockVoreSelfRequest": {
+	"cockVorePrompt": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -933,7 +933,7 @@
 			]
 		]
 	},
-	"cockVoreSelfRequestYes": {
+	"cockVorePromptYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -955,7 +955,7 @@
 			]
 		]
 	},
-	"cockVoreSelfRequestYesAfter": {
+	"cockVorePromptYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -976,7 +976,7 @@
 			]
 		]
 	},
-	"cockVoreSelfRequestNo": {
+	"cockVorePromptNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -993,7 +993,7 @@
 			]
 		]
 	},
-	"cockVoreSelfRequestNoYes": {
+	"cockVorePromptNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1010,7 +1010,7 @@
 			]
 		]
 	},
-	"cockVoreSelfRequestNoYesAfter": {
+	"cockVorePromptNoYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1112,7 +1112,7 @@
 			]
 		]
 	},
-	"selfRequestUnbirth": {
+	"PromptUnbirth": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1129,7 +1129,7 @@
 			]
 		]
 	},
-	"unbirthVoreSelfRequestYes": {
+	"unbirthVorePromptYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1146,7 +1146,7 @@
 			]
 		]
 	},
-	"unbirthVoreSelfRequestYesAfter": {
+	"unbirthVorePromptYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1163,7 +1163,7 @@
 			]
 		]
 	},
-	"unbirthVoreSelfRequestNo": {
+	"unbirthVorePromptNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1180,7 +1180,7 @@
 			]
 		]
 	},
-	"unbirthVoreSelfRequestNoYes": {
+	"unbirthVorePromptNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1197,7 +1197,7 @@
 			]
 		]
 	},
-	"unbirthVoreSelfRequestNoYesAfter": {
+	"unbirthVorePromptNoYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1294,7 +1294,7 @@
 			]
 		]
 	},
-	"breastVoreSelfRequest": {
+	"breastVorePrompt": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1311,7 +1311,7 @@
 			]
 		]
 	},
-	"breastVoreSelfRequestYes": {
+	"breastVorePromptYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1328,7 +1328,7 @@
 			]
 		]
 	},
-	"breastVoreSelfRequestYesAfter": {
+	"breastVorePromptYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1345,7 +1345,7 @@
 			]
 		]
 	},
-	"breastVoreSelfRequestNo": {
+	"breastVorePromptNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1362,7 +1362,7 @@
 			]
 		]
 	},
-	"breastVoreSelfRequestNoYes": {
+	"breastVorePromptNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1379,7 +1379,7 @@
 			]
 		]
 	},
-	"breastVoreSelfRequestNoYesAfter": {
+	"breastVorePromptNoYesAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
