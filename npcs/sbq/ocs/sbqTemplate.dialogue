@@ -58,13 +58,13 @@
 		"Nice and filling.",
 		"Not too bad."
 	],
-	"oralVoreUnpromptedBefore": [
+	"oralVoreSurprise": [
 		"I think you'll fill me up nicely.",
 		"I just need a quick bite to eat.",
 		"You seem like you'd make a good meal.",
 		"My belly's been grumbling, you look like you'll fill it..."
 	],
-	"oralVoreUnpromptedAfter": [
+	"oralVoreSurpriseAfter": [
 		"Dont mind me! Just grabbing lunch.",
 		"Get comfy in there!",
 		"Mmmhm, you are so filling! seems I nabbed a good one.",
@@ -245,13 +245,13 @@
 		"Heh~ it's almost like you're a living sex toy.",
 		"Oooh~ That squirming is rather nice."
 	],
-	"analVoreUnpromptedBefore": [
+	"analVoreSurprise": [
 		"Hey, I want to try something horny.",
 		"Hey... what if I shoved you up my ass?",
 		"Mm... I've been wanting some fun, and you seem like you'd make a good toy~",
 		"You know, theres a reason I'm not wearing pants~"
 	],
-	"analVoreUnpromptedAfter": [
+	"analVoreSurpriseAfter": [
 		"Ahhh~ hope I'm not squeezing too much.",
 		"Mmm~ That actually feels pretty good.",
 		"Heh~ it's almost like you're a living sex toy.",
@@ -405,7 +405,7 @@
 			]
 		]
 	},
-	"tailVoreUnpromptedBefore": {
+	"tailVoreSurprise": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -422,7 +422,7 @@
 			]
 		]
 	},
-	"tailVoreUnpromptedAfter": {
+	"tailVoreSurpriseAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -565,13 +565,13 @@
 		"Not bothering with anything else, straight to the belly.",
 		"Oooh~ Thats a stretch."
 	],
-	"navelVoreUnpromptedBefore": [
+	"navelVoreSurprise": [
 		"This isn't the usual way to do things.",
 		"I think we'll just skip right to your destination.",
 		"Gonna do a bit more than just squish you against my belly here...",
 		"Did you know theres more than just two ways into a belly?"
 	],
-	"navelVoreUnpromptedAfter": [
+	"navelVoreSurpriseAfter": [
 		"Mmmm~ that was a tight squeeze.",
 		"Right into my belly.",
 		"Not bothering with anything else, straight to the belly.",
@@ -699,12 +699,12 @@
 		"Ah.. easy instant snack, settle in my buddy.",
 		"You fit like a glove in me, might as well got comfortable."
 	],
-	"absorbVoreUnpromptedBefore": [ // blue here, absorbing time! not very confadent about these lines, tried to keep it vague as to not make it any kind of body absorb (slime, latex, ect..) while making it unque to this vore type
+	"absorbVoreSurprise": [ // blue here, absorbing time! not very confadent about these lines, tried to keep it vague as to not make it any kind of body absorb (slime, latex, ect..) while making it unque to this vore type
 		"Wanna see a neat trick? I'm about to make you disappear... into me!",
 		"I'm about to surround you completely with my body, just like a blanket!",
 		"Seems you're in need of a hug, let me hug you reeeeal close~"
 	],
-	"absorbVoreUnpromptedAfter": [
+	"absorbVoreSurpriseAfter": [
 		"Mmmh, I wonder if this counts as 'eating' or 'combining', eh, doesn't really matter now.",
 		"Ah, must feel strange to pass into me like that, I know I like the feeling though~",
 		"Life's easy when you can just do that to 'eat' things, ain't that right buddy?"
@@ -874,7 +874,7 @@
 			]
 		]
 	},
-	"cockVoreUnpromptedBefore": {
+	"cockVoreSurprise": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -891,7 +891,7 @@
 			]
 		]
 	},
-	"cockVoreUnpromptedAfter": {
+	"cockVoreSurpriseAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1076,7 +1076,7 @@
 			]
 		]
 	},
-	"unbirthVoreUnpromptedBefore": {
+	"unbirthVoreSurprise": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1093,7 +1093,7 @@
 			]
 		]
 	},
-	"unbirthVoreUnpromptedAfter": {
+	"unbirthVoreSurpriseAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1260,7 +1260,7 @@
 			]
 		]
 	},
-	"breastVoreUnpromptedBefore": {
+	"breastVoreSurprise": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1277,7 +1277,7 @@
 			]
 		]
 	},
-	"breastVoreUnpromptedAfter": {
+	"breastVoreSurpriseAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2130,7 +2130,7 @@
 			"I think your milk bath is done! How do you feel?"
 		]
 	},
-	"oralVorePreyRequest": {
+	"oralVoreRequesting": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2155,7 +2155,7 @@
 			]
 		]
 	},
-	"oralVorePreyRequestYes": {
+	"oralVoreRequestingYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2180,7 +2180,7 @@
 			]
 		]
 	},
-	"oralVorePreyRequestNo": {
+	"oralVoreRequestingNo": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2197,7 +2197,7 @@
 			]
 		]
 	},
-	"oralVorePreyRequestNoYes": {
+	"oralVoreRequestingNoYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2222,7 +2222,7 @@
 			]
 		]
 	},
-	"tailVorePreyRequest": {
+	"tailVoreRequesting": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2239,7 +2239,7 @@
 			]
 		]
 	},
-	"tailVorePreyRequestYes": {
+	"tailVoreRequestingYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2256,7 +2256,7 @@
 			]
 		]
 	},
-	"tailVorePreyRequestNo": {
+	"tailVoreRequestingNo": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2273,7 +2273,7 @@
 			]
 		]
 	},
-	"tailVorePreyRequestNoYes": {
+	"tailVoreRequestingNoYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2290,23 +2290,23 @@
 			]
 		]
 	},
-	"analVorePreyRequest": [
+	"analVoreRequesting": [
 		"You wouldn't mind if I just let myself in, would you?",
 		"Could you do me a favor and bend over?"
 	],
-	"analVorePreyRequestYes": [
+	"analVoreRequestingYes": [
 		"You'll let me in? I can't wait to be in your booty!",
 		"Sweet! I'm going to love being in that butt!"
 	],
-	"analVorePreyRequestNo": [
+	"analVoreRequestingNo": [
 		"Oh... well it was worth asking.",
 		"No booty for me today, huh?"
 	],
-	"analVorePreyRequestNoYes": [
+	"analVoreRequestingNoYes": [
 		"Well that's too bad, because I'm going in that butt anyway!",
 		"I think you'll change your tune once you feel me wiggling inside your rear!"
 	],
-	"navelVorePreyRequest": { // navel vore, one I don't really get, but its here for those who do, sadly I'm only skimming the proofreading on this kink, someone who's explicitly into it should write the lines for it
+	"navelVoreRequesting": { // navel vore, one I don't really get, but its here for those who do, sadly I'm only skimming the proofreading on this kink, someone who's explicitly into it should write the lines for it
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2323,7 +2323,7 @@
 			]
 		]
 	},
-	"navelVorePreyRequestYes": {
+	"navelVoreRequestingYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2340,7 +2340,7 @@
 			]
 		]
 	},
-	"navelVorePreyRequestNo": {
+	"navelVoreRequestingNo": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2357,7 +2357,7 @@
 			]
 		]
 	},
-	"navelVorePreyRequestNoYes": {
+	"navelVoreRequestingNoYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2374,7 +2374,7 @@
 			]
 		]
 	},
-	"absorbVorePreyRequest": {
+	"absorbVoreRequesting": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2391,7 +2391,7 @@
 			]
 		]
 	},
-	"absorbVorePreyRequestYes": {
+	"absorbVoreRequestingYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2408,7 +2408,7 @@
 			]
 		]
 	},
-	"absorbVorePreyRequestNo": {
+	"absorbVoreRequestingNo": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2425,7 +2425,7 @@
 			]
 		]
 	},
-	"absorbVorePreyRequestNoYes": {
+	"absorbVoreRequestingNoYes": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2442,7 +2442,7 @@
 			]
 		]
 	},
-	"preyRequestUnbirth": {
+	"RequestingUnbirth": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2459,7 +2459,7 @@
 			]
 		]
 	},
-	"unbirthVorePreyRequestYes": {
+	"unbirthVoreRequestingYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2476,7 +2476,7 @@
 			]
 		]
 	},
-	"unbirthVorePreyRequestNo": {
+	"unbirthVoreRequestingNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2493,7 +2493,7 @@
 			]
 		]
 	},
-	"unbirthVorePreyRequestNoYes": {
+	"unbirthVoreRequestingNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2510,7 +2510,7 @@
 			]
 		]
 	},
-	"cockVorePreyRequest": {
+	"cockVoreRequesting": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2527,7 +2527,7 @@
 			]
 		]
 	},
-	"cockVorePreyRequestYes": {
+	"cockVoreRequestingYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2544,7 +2544,7 @@
 			]
 		]
 	},
-	"cockVorePreyRequestNo": {
+	"cockVoreRequestingNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2561,7 +2561,7 @@
 			]
 		]
 	},
-	"cockVorePreyRequestNoYes": {
+	"cockVoreRequestingNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2578,7 +2578,7 @@
 			]
 		]
 	},
-	"breastVorePreyRequest": {
+	"breastVoreRequesting": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2595,7 +2595,7 @@
 			]
 		]
 	},
-	"breastVorePreyRequestYes": {
+	"breastVoreRequestingYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2612,7 +2612,7 @@
 			]
 		]
 	},
-	"breastVorePreyRequestNo": {
+	"breastVoreRequestingNo": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2629,7 +2629,7 @@
 			]
 		]
 	},
-	"breastVorePreyRequestNoYes": {
+	"breastVoreRequestingNoYes": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2646,7 +2646,7 @@
 			]
 		]
 	},
-	"oralVoreForcingPrey": {
+	"oralVoreForcing": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2664,7 +2664,7 @@
 			]
 		]
 	},
-	"tailVoreForcingPrey": {
+	"tailVoreForcing": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2681,7 +2681,7 @@
 			]
 		]
 	},
-	"absorbVoreForcingPrey": {
+	"absorbVoreForcing": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2698,7 +2698,7 @@
 			]
 		]
 	},
-	"navelVoreForcingPrey": {
+	"navelVoreForcing": {
 		"percentage": "rest",
 		"pools": [
 			[ // 0% - 25%
@@ -2715,7 +2715,7 @@
 			]
 		]
 	},
-	"analVoreForcingPrey": {
+	"analVoreForcing": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2732,7 +2732,7 @@
 			]
 		]
 	},
-	"cockVoreForcingPrey": {
+	"cockVoreForcing": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2749,7 +2749,7 @@
 			]
 		]
 	},
-	"forcingPreyUnbirth": {
+	"ForcingUnbirth": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2766,7 +2766,7 @@
 			]
 		]
 	},
-	"breastVoreForcingPrey": {
+	"breastVoreForcing": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2783,7 +2783,7 @@
 			]
 		]
 	},
-	"oralVoreUnwillingPred": {
+	"oralVoreForced": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -2808,7 +2808,7 @@
 			]
 		]
 	},
-	"tailVoreUnwillingPred": {
+	"tailVoreForced": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -2833,7 +2833,7 @@
 			]
 		]
 	},
-	"absorbVoreUnwillingPred": {
+	"absorbVoreForced": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -2849,7 +2849,7 @@
 			[ // 50% - 75%
 				"I'm not a darn sponge! Please don't jump into me randomly just because you can... Anyway, you better get comfy.",
 				"While it does feel nice surrounding you like this, I'd rather you ask first.",
-				"I find this, uh, sudden dive you made unprompted! ...But not entirely unwanted..."
+				"I find this, uh, sudden dive you made surprise! ...But not entirely unwanted..."
 			],
 			[ // 75% - 100%
 				"W-wah! How dare you, you can't just sink into me like that. Ask first!",
@@ -2858,7 +2858,7 @@
 			]
 		]
 	},
-	"navelVoreUnwillingPred": {
+	"navelVoreForced": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -2883,7 +2883,7 @@
 			]
 		]
 	},
-	"analVoreUnwillingPred": {
+	"analVoreForced": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2908,7 +2908,7 @@
 			]
 		]
 	},
-	"cockVoreUnwillingPred": {
+	"cockVoreForced": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2932,7 +2932,7 @@
 			]
 		]
 	},
-	"unwillingPredUnbirth": {
+	"ForcedUnbirth": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -2957,7 +2957,7 @@
 			]
 		]
 	},
-	"breastVoreUnwillingPred": {
+	"breastVoreForced": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -3653,16 +3653,16 @@
 		"Try not to make me too hungry..."
 	],
 	"infuseRequestBellyAfterLayer": ":infuseRequestBellyAfter",
-	"infuseUnpromptedBellyBefore": [
+	"infuseSurpriseBellyBefore": [
 		"I think... I need you in my belly... or... as my belly..."
 	],
-	"infuseUnpromptedBellyBeforeLayer": ":infuseUnpromptedBellyBefore",
-	"infuseUnpromptedBellyAfter": [
+	"infuseSurpriseBellyBeforeLayer": ":infuseSurpriseBellyBefore",
+	"infuseSurpriseBellyAfter": [
 		"I'm sure you won't mind being a part of me for a while, huh?",
 		"Let's be honest, you look a lot cuter this way.",
 		"What was their name again? Oh well."
 	],
-	"infuseUnpromptedBellyAfterLayer": ":infuseUnpromptedBellyAfter",
+	"infuseSurpriseBellyAfterLayer": ":infuseSurpriseBellyAfter",
 	"infuseRequestTailBefore": [
 		"Looking to be a part of my tail, huh? Can't say I blame you!",
 		"You're gonna make a nice bit of extra length!",
@@ -3674,16 +3674,16 @@
 		"All a part of me, now!"
 	],
 	"infuseRequestTailAfterLayer": ":infuseRequestTailAfter",
-	"infuseUnpromptedTailBefore": [
+	"infuseSurpriseTailBefore": [
 		"Might as well keep you back there, since you squirmed so nicely!",
 		"I think you'll look good as part of my tail. Wouldn't you agree?"
 	],
-	"infuseUnpromptedTailBeforeLayer": ":infuseUnpromptedTailBefore",
-	"infuseUnpromptedTailAfter": [
+	"infuseSurpriseTailBeforeLayer": ":infuseSurpriseTailBefore",
+	"infuseSurpriseTailAfter": [
 		"Looking good back there!",
 		"What was their name again? <entityname>?"
 	],
-	"infuseUnpromptedTailAfterLayer": ":infuseUnpromptedTailAfter",
+	"infuseSurpriseTailAfterLayer": ":infuseSurpriseTailAfter",
 	"infuseRequestBreastsBefore": [
 		"You want to be my boobs?",
 		"Mm, can't wait to be jiggling on my chest, can you?",
@@ -3696,18 +3696,18 @@
 		"Ah, you're already leaking milk~"
 	],
 	"infuseRequestBreastsAfterLayer": ":infuseRequestBreastsAfter",
-	"infuseUnpromptedBreastsBefore": [
+	"infuseSurpriseBreastsBefore": [
 		"Hehe, I think you belong as something else~",
 		"Mm~ I think it'd be fitting to have you jiggling on my chest~",
 		"I think I have a far better use for you~"
 	],
-	"infuseUnpromptedBreastsBeforeLayer": ":infuseUnpromptedBreastsBefore",
-	"infuseUnpromptedBreastsAfter": [
+	"infuseSurpriseBreastsBeforeLayer": ":infuseSurpriseBreastsBefore",
+	"infuseSurpriseBreastsAfter": [
 		"Ahh~ Finally got you where you belong~",
 		"You belong right where you are, jiggling on my chest~",
 		"Mmm~ Feels right to have you there~"
 	],
-	"infuseUnpromptedBreastsAfterLayer": ":infuseUnpromptedBreastsAfter",
+	"infuseSurpriseBreastsAfterLayer": ":infuseSurpriseBreastsAfter",
 	"infuseRequestPussyBefore": [
 		"You want to be my pussy?",
 		"Mm, can't wait to be soaking wet down there can you?",
@@ -3720,18 +3720,18 @@
 		"Ah, you're already sopping wet with excitement~"
 	],
 	"infuseRequestPussyAfterLayer": ":infuseRequestPussyAfter",
-	"infuseUnpromptedPussyBefore": [
+	"infuseSurprisePussyBefore": [
 		"Hehe, I think you belong as something else~",
 		"Mm~ I think it'd be fitting to have you dripping between my legs~",
 		"I think I have a far better use for you~"
 	],
-	"infuseUnpromptedPussyBeforeLayer": ":infuseUnpromptedPussyBefore",
-	"infuseUnpromptedPussyAfter": [
+	"infuseSurprisePussyBeforeLayer": ":infuseSurprisePussyBefore",
+	"infuseSurprisePussyAfter": [
 		"Ahh~ Finally got you where you belong~",
 		"You belong right where you are, soaking between my legs~",
 		"Mmm~ Feels right to have you there~"
 	],
-	"infuseUnpromptedPussyAfterLayer": ":infuseUnpromptedPussyAfter",
+	"infuseSurprisePussyAfterLayer": ":infuseSurprisePussyAfter",
 	"infuseRequestShaftBefore": [
 		"You want to be my cock?",
 		"Mm, can't wait to be throbbing down there, can you?",
@@ -3749,19 +3749,19 @@
 	"infuseRequestShaftAfterLayer": [
 		"And now <infusedName> is even more trapped~"
 	],
-	"infuseUnpromptedShaftBefore": [
+	"infuseSurpriseShaftBefore": [
 		"Hehe, I think you belong as something else~",
 		"Mm~ I think it'd be fitting to have you throbbing between my legs~",
 		"You're always so twitchy... which would make you a good cock~",
 		"I think I have a far better use for you~"
 	],
-	"infuseUnpromptedShaftBeforeLayer": ":infuseUnpromptedShaftBefore",
-	"infuseUnpromptedShaftAfter": [
+	"infuseSurpriseShaftBeforeLayer": ":infuseSurpriseShaftBefore",
+	"infuseSurpriseShaftAfter": [
 		"Ahh~ Finally got you where you belong~",
 		"You belong right where you are, throbbing between my legs~",
 		"Mmm~ Feels right to have you there~"
 	],
-	"infuseUnpromptedShaftAfterLayer": ":infuseUnpromptedShaftAfter",
+	"infuseSurpriseShaftAfterLayer": ":infuseSurpriseShaftAfter",
 	"infuseRequestBallsBefore": [
 		"Oh, so you want to be my balls~?",
 		"You want to be swinging around between my legs~?"
@@ -3772,14 +3772,14 @@
 		"Usually friends are stored IN the balls... but I like this arrangement too~"
 	],
 	"infuseRequestBallsAfterLayer": ":infuseRequestBallsAfter",
-	"infuseUnpromptedBallsBefore": [
+	"infuseSurpriseBallsBefore": [
 		"Hmmm~ I think you'd make a nice pair of balls~"
 	],
-	"infuseUnpromptedBallsBeforeLayer": ":infuseUnpromptedBallsBefore",
-	"infuseUnpromptedBallsAfter": [
+	"infuseSurpriseBallsBeforeLayer": ":infuseSurpriseBallsBefore",
+	"infuseSurpriseBallsAfter": [
 		"Perfect, you feel perfect hanging around down there~"
 	],
-	"infuseUnpromptedBallsAfterLayer": ":infuseUnpromptedBallsAfter",
+	"infuseSurpriseBallsAfterLayer": ":infuseSurpriseBallsAfter",
 	"infused": [
 		"<slowlove>",
 		"<love>",
