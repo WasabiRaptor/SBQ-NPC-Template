@@ -58,13 +58,13 @@
 		"Nice and filling.",
 		"Not too bad."
 	],
-	"oralVoreSurprise": [
+	"oralVoreNoPrompt": [
 		"I think you'll fill me up nicely.",
 		"I just need a quick bite to eat.",
 		"You seem like you'd make a good meal.",
 		"My belly's been grumbling, you look like you'll fill it..."
 	],
-	"oralVoreSurpriseAfter": [
+	"oralVoreNoPromptAfter": [
 		"Dont mind me! Just grabbing lunch.",
 		"Get comfy in there!",
 		"Mmmhm, you are so filling! seems I nabbed a good one.",
@@ -245,13 +245,13 @@
 		"Heh~ it's almost like you're a living sex toy.",
 		"Oooh~ That squirming is rather nice."
 	],
-	"analVoreSurprise": [
+	"analVoreNoPrompt": [
 		"Hey, I want to try something horny.",
 		"Hey... what if I shoved you up my ass?",
 		"Mm... I've been wanting some fun, and you seem like you'd make a good toy~",
 		"You know, theres a reason I'm not wearing pants~"
 	],
-	"analVoreSurpriseAfter": [
+	"analVoreNoPromptAfter": [
 		"Ahhh~ hope I'm not squeezing too much.",
 		"Mmm~ That actually feels pretty good.",
 		"Heh~ it's almost like you're a living sex toy.",
@@ -405,7 +405,7 @@
 			]
 		]
 	},
-	"tailVoreSurprise": {
+	"tailVoreNoPrompt": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -422,7 +422,7 @@
 			]
 		]
 	},
-	"tailVoreSurpriseAfter": {
+	"tailVoreNoPromptAfter": {
 		"percentage": "food",
 		"pools": [
 			[ // 0% - 25%
@@ -565,13 +565,13 @@
 		"Not bothering with anything else, straight to the belly.",
 		"Oooh~ Thats a stretch."
 	],
-	"navelVoreSurprise": [
+	"navelVoreNoPrompt": [
 		"This isn't the usual way to do things.",
 		"I think we'll just skip right to your destination.",
 		"Gonna do a bit more than just squish you against my belly here...",
 		"Did you know theres more than just two ways into a belly?"
 	],
-	"navelVoreSurpriseAfter": [
+	"navelVoreNoPromptAfter": [
 		"Mmmm~ that was a tight squeeze.",
 		"Right into my belly.",
 		"Not bothering with anything else, straight to the belly.",
@@ -699,12 +699,12 @@
 		"Ah.. easy instant snack, settle in my buddy.",
 		"You fit like a glove in me, might as well got comfortable."
 	],
-	"absorbVoreSurprise": [ // blue here, absorbing time! not very confadent about these lines, tried to keep it vague as to not make it any kind of body absorb (slime, latex, ect..) while making it unque to this vore type
+	"absorbVoreNoPrompt": [ // blue here, absorbing time! not very confadent about these lines, tried to keep it vague as to not make it any kind of body absorb (slime, latex, ect..) while making it unque to this vore type
 		"Wanna see a neat trick? I'm about to make you disappear... into me!",
 		"I'm about to surround you completely with my body, just like a blanket!",
 		"Seems you're in need of a hug, let me hug you reeeeal close~"
 	],
-	"absorbVoreSurpriseAfter": [
+	"absorbVoreNoPromptAfter": [
 		"Mmmh, I wonder if this counts as 'eating' or 'combining', eh, doesn't really matter now.",
 		"Ah, must feel strange to pass into me like that, I know I like the feeling though~",
 		"Life's easy when you can just do that to 'eat' things, ain't that right buddy?"
@@ -874,7 +874,7 @@
 			]
 		]
 	},
-	"cockVoreSurprise": {
+	"cockVoreNoPrompt": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -891,7 +891,7 @@
 			]
 		]
 	},
-	"cockVoreSurpriseAfter": {
+	"cockVoreNoPromptAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1076,7 +1076,7 @@
 			]
 		]
 	},
-	"unbirthVoreSurprise": {
+	"unbirthVoreNoPrompt": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1093,7 +1093,7 @@
 			]
 		]
 	},
-	"unbirthVoreSurpriseAfter": {
+	"unbirthVoreNoPromptAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1260,7 +1260,7 @@
 			]
 		]
 	},
-	"breastVoreSurprise": {
+	"breastVoreNoPrompt": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -1277,7 +1277,7 @@
 			]
 		]
 	},
-	"breastVoreSurpriseAfter": {
+	"breastVoreNoPromptAfter": {
 		"percentage": "horny",
 		"pools": [
 			[ // 0% - 25%
@@ -3653,16 +3653,16 @@
 		"Try not to make me too hungry..."
 	],
 	"infuseRequestBellyAfterLayer": ":infuseRequestBellyAfter",
-	"infuseSurpriseBellyBefore": [
+	"infuseNoPromptBellyBefore": [
 		"I think... I need you in my belly... or... as my belly..."
 	],
-	"infuseSurpriseBellyBeforeLayer": ":infuseSurpriseBellyBefore",
-	"infuseSurpriseBellyAfter": [
+	"infuseNoPromptBellyBeforeLayer": ":infuseNoPromptBellyBefore",
+	"infuseNoPromptBellyAfter": [
 		"I'm sure you won't mind being a part of me for a while, huh?",
 		"Let's be honest, you look a lot cuter this way.",
 		"What was their name again? Oh well."
 	],
-	"infuseSurpriseBellyAfterLayer": ":infuseSurpriseBellyAfter",
+	"infuseNoPromptBellyAfterLayer": ":infuseNoPromptBellyAfter",
 	"infuseRequestTailBefore": [
 		"Looking to be a part of my tail, huh? Can't say I blame you!",
 		"You're gonna make a nice bit of extra length!",
@@ -3674,16 +3674,16 @@
 		"All a part of me, now!"
 	],
 	"infuseRequestTailAfterLayer": ":infuseRequestTailAfter",
-	"infuseSurpriseTailBefore": [
+	"infuseNoPromptTailBefore": [
 		"Might as well keep you back there, since you squirmed so nicely!",
 		"I think you'll look good as part of my tail. Wouldn't you agree?"
 	],
-	"infuseSurpriseTailBeforeLayer": ":infuseSurpriseTailBefore",
-	"infuseSurpriseTailAfter": [
+	"infuseNoPromptTailBeforeLayer": ":infuseNoPromptTailBefore",
+	"infuseNoPromptTailAfter": [
 		"Looking good back there!",
 		"What was their name again? <entityname>?"
 	],
-	"infuseSurpriseTailAfterLayer": ":infuseSurpriseTailAfter",
+	"infuseNoPromptTailAfterLayer": ":infuseNoPromptTailAfter",
 	"infuseRequestBreastsBefore": [
 		"You want to be my boobs?",
 		"Mm, can't wait to be jiggling on my chest, can you?",
@@ -3696,18 +3696,18 @@
 		"Ah, you're already leaking milk~"
 	],
 	"infuseRequestBreastsAfterLayer": ":infuseRequestBreastsAfter",
-	"infuseSurpriseBreastsBefore": [
+	"infuseNoPromptBreastsBefore": [
 		"Hehe, I think you belong as something else~",
 		"Mm~ I think it'd be fitting to have you jiggling on my chest~",
 		"I think I have a far better use for you~"
 	],
-	"infuseSurpriseBreastsBeforeLayer": ":infuseSurpriseBreastsBefore",
-	"infuseSurpriseBreastsAfter": [
+	"infuseNoPromptBreastsBeforeLayer": ":infuseNoPromptBreastsBefore",
+	"infuseNoPromptBreastsAfter": [
 		"Ahh~ Finally got you where you belong~",
 		"You belong right where you are, jiggling on my chest~",
 		"Mmm~ Feels right to have you there~"
 	],
-	"infuseSurpriseBreastsAfterLayer": ":infuseSurpriseBreastsAfter",
+	"infuseNoPromptBreastsAfterLayer": ":infuseNoPromptBreastsAfter",
 	"infuseRequestPussyBefore": [
 		"You want to be my pussy?",
 		"Mm, can't wait to be soaking wet down there can you?",
@@ -3720,18 +3720,18 @@
 		"Ah, you're already sopping wet with excitement~"
 	],
 	"infuseRequestPussyAfterLayer": ":infuseRequestPussyAfter",
-	"infuseSurprisePussyBefore": [
+	"infuseNoPromptPussyBefore": [
 		"Hehe, I think you belong as something else~",
 		"Mm~ I think it'd be fitting to have you dripping between my legs~",
 		"I think I have a far better use for you~"
 	],
-	"infuseSurprisePussyBeforeLayer": ":infuseSurprisePussyBefore",
-	"infuseSurprisePussyAfter": [
+	"infuseNoPromptPussyBeforeLayer": ":infuseNoPromptPussyBefore",
+	"infuseNoPromptPussyAfter": [
 		"Ahh~ Finally got you where you belong~",
 		"You belong right where you are, soaking between my legs~",
 		"Mmm~ Feels right to have you there~"
 	],
-	"infuseSurprisePussyAfterLayer": ":infuseSurprisePussyAfter",
+	"infuseNoPromptPussyAfterLayer": ":infuseNoPromptPussyAfter",
 	"infuseRequestShaftBefore": [
 		"You want to be my cock?",
 		"Mm, can't wait to be throbbing down there, can you?",
@@ -3749,19 +3749,19 @@
 	"infuseRequestShaftAfterLayer": [
 		"And now <infusedName> is even more trapped~"
 	],
-	"infuseSurpriseShaftBefore": [
+	"infuseNoPromptShaftBefore": [
 		"Hehe, I think you belong as something else~",
 		"Mm~ I think it'd be fitting to have you throbbing between my legs~",
 		"You're always so twitchy... which would make you a good cock~",
 		"I think I have a far better use for you~"
 	],
-	"infuseSurpriseShaftBeforeLayer": ":infuseSurpriseShaftBefore",
-	"infuseSurpriseShaftAfter": [
+	"infuseNoPromptShaftBeforeLayer": ":infuseNoPromptShaftBefore",
+	"infuseNoPromptShaftAfter": [
 		"Ahh~ Finally got you where you belong~",
 		"You belong right where you are, throbbing between my legs~",
 		"Mmm~ Feels right to have you there~"
 	],
-	"infuseSurpriseShaftAfterLayer": ":infuseSurpriseShaftAfter",
+	"infuseNoPromptShaftAfterLayer": ":infuseNoPromptShaftAfter",
 	"infuseRequestBallsBefore": [
 		"Oh, so you want to be my balls~?",
 		"You want to be swinging around between my legs~?"
@@ -3772,14 +3772,14 @@
 		"Usually friends are stored IN the balls... but I like this arrangement too~"
 	],
 	"infuseRequestBallsAfterLayer": ":infuseRequestBallsAfter",
-	"infuseSurpriseBallsBefore": [
+	"infuseNoPromptBallsBefore": [
 		"Hmmm~ I think you'd make a nice pair of balls~"
 	],
-	"infuseSurpriseBallsBeforeLayer": ":infuseSurpriseBallsBefore",
-	"infuseSurpriseBallsAfter": [
+	"infuseNoPromptBallsBeforeLayer": ":infuseNoPromptBallsBefore",
+	"infuseNoPromptBallsAfter": [
 		"Perfect, you feel perfect hanging around down there~"
 	],
-	"infuseSurpriseBallsAfterLayer": ":infuseSurpriseBallsAfter",
+	"infuseNoPromptBallsAfterLayer": ":infuseNoPromptBallsAfter",
 	"infused": [
 		"<slowlove>",
 		"<love>",
