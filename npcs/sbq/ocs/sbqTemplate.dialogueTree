@@ -74,30 +74,6 @@
 
 	// responses when another character requests an action from them
 	"actionRequested" : {
-		// name of action requested
-		"default" : {
-			// is the action available or not?
-			"true" : {
-				// dialogue said before the action
-				"new" : {"dialogueRandom" : [":defaultRequestedBefore"]},
-				// dialogue said after the action finishes
-				"after" : {"new" : {"dialogueRandom" : [":defaultRequestedAfter"]}}
-			},
-			"false": {
-				"default" : {"new":{"dialogueRandom":":cantAction"}},
-				"error" : {"new":{"dialogueRandom" : [":error"]}},
-				"no" : {"new" : {"dialogueRandom" : [":notFeelingIt"]}},
-				"tooBig" : {"new" : {"dialogueRandom" : [":tooBig"]}},
-				"tooSmall" : {"new" : {"dialogueRandom" : [":tooSmall"]}},
-				"noSlots" : {"new" : {"dialogueRandom" : [":noSlots"]}},
-				"noSpace" : {"new" : {"dialogueRandom" : [":full"]}},
-				"needsInfusion" : {"new" : {"dialogueRandom" : [":needsInfusion"]}},
-				"invalidLocation" : ".error",
-				"settingsMismatch" : ".error",
-				"targetSettingsMismatch" : ".error",
-				"targetPreySettingsMismatch" : {"new":{"dialogueRandom":[":targetPreySettingsMismatch"]}}
-			}
-		},
 		"<action>" : {
 			// is the action available or not?
 			"true" : {
@@ -107,16 +83,19 @@
 				"after" : {"new" : {"dialogueRandom" : [":<action>RequestedAfter"]}}
 			},
 			"false" : {
-				// if it wasn't, what was the reason? (arg2 returned by the action)
-				"noSpace" : {
-					"new" : {"dialogueRandom" : [":<action>Full"]},
-
-					"location" : "belly",
-					"next" : ["location_compression","location_mainEffect"],
-					"time" : {"replace" : {"dialogueRandom" : [":<action>CompressionFull"]}},
-					"softDigest" : ".digest",
-					"digest" : {"replace" : {"dialogueRandom" : [":<action>DigestFull"]}}
-				}
+				"default" : {"new":{"dialogueRandom":":<action>Invalid"}},
+				"error" : {"new":{"dialogueRandom" : [":error"]}},
+				"no" : {"new" : {"dialogueRandom" : [":<action>No"]}},
+				"tooBig" : {"new" : {"dialogueRandom" : [":<action>TooBig"]}},
+				"tooSmall" : {"new" : {"dialogueRandom" : [":<action>TooSmall"]}},
+				"noSlots" : {"new" : {"dialogueRandom" : [":<action>NoSlots"]}},
+				"noSpace" : {"new" : {"dialogueRandom" : [":<action>Full"]}},
+				"needsInfusion" : {"new" : {"dialogueRandom" : [":<action>NeedsInfusion"]}},
+				"alreadyInfused" : {"new" : {"dialogueRandom" : [":<action>AlreadyInfused"]}},
+				"invalidLocation" : ".error",
+				"settingsMismatch" : ".error",
+				"targetSettingsMismatch" : ".error",
+				"targetPreySettingsMismatch" : {"new":{"dialogueRandom":[":<action>TargetPreySettingsMismatch"]}}
 			}
 		}
 	},
@@ -134,14 +113,20 @@
 			},
 			// responses based on their response to the prompt
 			"yes" : {
+				"next" : ["promptResponse"],
+				"promptResponse" : [true, true, "yes", "<action>"],
 				"new" : {"dialogueRandom" : [":<action>PromptYes"],"dismissTime" : 2},
 				// what they say after doing the action (optional)
 				"after" : {"new" : {"dialogueRandom" : [":<action>PromptYesAfter"],"dismissTime" : 2}}
 			},
 			"no" : {
+				"next" : ["promptResponse"],
+				"promptResponse" : [false, true, "no", "<action>"],
 				"new" : {"dialogueRandom" : [":<action>PromptNo"],"dismissTime" : 2}
 			},
 			"noYes" : {
+				"next" : ["promptResponse"],
+				"promptResponse" : [true, true, "noYes", "<action>"],
 				"new" : {"dialogueRandom" : [":<action>PromptNoYes"],"dismissTime" : 2},
 				// what they say after doing the action (optional)
 				"after" : {"new" : {"dialogueRandom" : [":<action>PromptNoYesAfter"],"dismissTime" : 2}}
@@ -161,15 +146,18 @@
 				]
 			},
 			"yes" : {
-				"next" : ["promptResponseYes"],
+				"next" : ["promptResponse"],
+				"promptResponse" : [true, false, "yes", "<action>"],
 				"new" : {"dialogueRandom" : [":<action>RequestingYes"],"dismissTime" : 2}
 			},
 			"no" : {
-				"next" : ["promptResponseNo"],
+				"next" : ["promptResponse"],
+				"promptResponse" : [false, false, "no", "<action>"],
 				"new" : {"dialogueRandom" : [":<action>RequestingNo"],"dismissTime" : 2}
 			},
 			"noYes" : {
-				"next" : ["promptResponseNoYes"],
+				"next" : ["promptResponse"],
+				"promptResponse" : [true, false, "noYes", "<action>"],
 				"new" : {"dialogueRandom" : [":<action>RequestingNoYes"],"dismissTime" : 2}
 			}
 		}
@@ -182,6 +170,7 @@
 			"after" : {"new" : {"dialogueRandom" : [":<action>NoPromptAfter"]}}
 		}
 	},
+	// responding to an action happening to them unprompted
 	"unpromptedAction" : {
 		"<action>" : {
 			"new" : {"dialogueRandom" : [":<action>Unprompted"]},
