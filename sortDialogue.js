@@ -4,7 +4,7 @@ const JSONC = require('comment-json');
 
 let dupes = {}
 
-let npcFile = fs.readFileSync(argv[2], { encoding: "utf-8" });
+let dialogueTreeFile = fs.readFileSync(argv[2], { encoding: "utf-8" });
 let dialogueFile = fs.readFileSync(argv[3], { encoding: "utf-8" });
 let secondaryDialogue
 if (argv[4]) {
@@ -12,7 +12,7 @@ if (argv[4]) {
 	secondaryDialogue = JSONC.parse(secondaryDialogueFile);
 }
 
-let dialogueTree = JSONC.parse(npcFile)?.scriptConfig?.dialogueTree;
+let dialogueTree = JSONC.parse(dialogueTreeFile);
 if (!dialogueTree) {
 	console.log("error reading " + argv[2]);
 	process.exit(1)
@@ -54,7 +54,7 @@ function handle(path, dialogueTree1) {
 function checkRepoint(input) {
 	for (let [key, child] of Object.entries(input)) {
 		if (typeof child == "string") {
-			if ((child.substring(0, 1) == ":") && child != ":missingDialogue") {
+			if ((child.substring(0, 1) == ":")) {
 				JSONC.assign(input, JSONC.parse(`{\n "${key}": "${child}" // duplicated lines\n }`));
 			}
 		}
@@ -64,21 +64,25 @@ function checkRepoint(input) {
 function checkDialogue(input) {
 	let out = {}
 	if (typeof input == "string") {
-		if (input.substring(0,1) == ":") {
-			let key = input.slice(1, input.length)
-			if (!dupes[key]) {
-				console.log(key)
-				console.log(dialogue[key])
-				if (typeof dialogue[key] == "undefined") {
-					if (argv[4] && secondaryDialogue[key]) {
-						JSONC.assign(out, { [key]: secondaryDialogue[key] });
-					} else JSONC.assign(out, { [key]: ":missingDialogue" });
-				} else {
-					let data = dialogue[key]
-					delete dialogue[key]
-					dupes[key] = true
-					JSONC.assign(out, { [key]: data })
-					JSONC.assign(out, checkDialogue(data));
+		if (input.substring(0, 1) == ":") {
+			if ((input == ":optionsPrompt") | (input == ":choosePrompt") | (input == ":ynPrompt")) {
+
+			} else {
+				let key = input.slice(1, input.length)
+				if (!dupes[key]) {
+					console.log(key)
+					console.log(dialogue[key])
+					if (typeof dialogue[key] == "undefined") {
+						if (argv[4] && secondaryDialogue[key]) {
+							JSONC.assign(out, { [key]: secondaryDialogue[key] });
+						} else JSONC.assign(out, { [key]: "Missing: " + key + " " + "<dialoguePath>" });
+					} else {
+						let data = dialogue[key]
+						delete dialogue[key]
+						dupes[key] = true
+						JSONC.assign(out, { [key]: data })
+						JSONC.assign(out, checkDialogue(data));
+					}
 				}
 			}
 		}
