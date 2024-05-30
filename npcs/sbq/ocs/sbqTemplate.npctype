@@ -4,9 +4,8 @@
 
 	"scripts" : [
 		"/npcs/bmain.lua",
-		"/scripts/SBQ_npc_bmain.lua",
-		"/scripts/speciesAnimOverride_npc_bmain.lua",
-		"/npcs/tenants/sbq/SBQ_vore_tenant.lua"
+		"/scripts/npc/SBQ_npc_bmain.lua",
+		"/scripts/npc/SBQ_vore_npc.lua"
 	],
 
 	// you really should make sure to define the npcname so the OC actually has the OC's name
@@ -27,18 +26,15 @@
 		// "bodyDirectives" : "",
 
 		// "gender" : "male",
-		// "personalityArmIdle" : "idle.2",
-		// "personalityIdle" : "idle.2",
+		// "personalityArmIdle" : "idle.1",
+		// "personalityIdle" : "idle.1",
 	},
 	"scriptConfig" : {
 		"sbqNPC" : true,
-
-		// these remove access to the settings panels for pred and prey respectively
-		// "isPredator" : false,
-		// "isPrey" : false,
-
 		"isOC" : true, // this is just for scripts to identify this NPC as an OC and for some specific behavior relating to that
+
 		"behavior" : "sbqvorevillager",
+		"sbqConvertType" : false, // this is simply for the npc type it could convert into that isn't vorny, only change this if you have the npc exist in a different mod without sbq
 		"behaviorConfig": {
 			"emptyHands": true
 		},
@@ -49,6 +45,67 @@
 				//"nextNpcType" : ["sbqCrewTemplate"] // this lets the NPC graduate into a recruitable crewmember after doing a few quests for them
 			}
 		},
+
+		// everything related to SBQ actions and settings and such is within here! this simply overrides values of the species specific vore config
+		// so if something is more inherent to the species than the OC itself, perhaps it should be defined in the species vore config!
+		"voreConfig" : [
+			// These are shortcuts to add in configuration to disable certain kinks one simply needs to uncomment that line and
+			// everything relevant to that will automatically be disabled!
+			// "/humanoid/any/disableAllVorePred.config",
+			// "/humanoid/any/disableAllVorePrey.config",
+			// "/humanoid/any/disableAllInfusePred.config",
+			// "/humanoid/any/disableAllInfusePrey.config",
+			// "/humanoid/any/disableAllTF.config",
+			// "/humanoid/any/disableAllSize.config",
+			{
+				// the default settings the NPC will have when initialized! things defined here can still be configured by players after spawn
+				// to better understand this, I would suggest heading ingame and then going to the misc tab and click the export settings button
+				// that will not only give an item containing your current settings, it will also print them to starbound.log which you can then
+				// just copy and past here and then possibly edit further as you see fit
+				"defaultSettings" : {
+
+				},
+				// settings that are locked to a specific value and cannot be configured by the player, useful for disabling certain actions
+				// or things someone doesn't like, or simply preventing someone from diabling something important to the OC
+				// same structure as default settings above, only what is defined here is locked! only define something here if
+				// you want it to stay locked
+				"overrideSettings" : {
+					// examples for disabling certain prefs
+					// "vorePrefs" : {
+					// 	"oralVore" : {
+					// 		"pred" : false,
+					// 		"prey" : false
+					// 	}
+					// },
+					// "infusePrefs" : {
+					// 	"bellyInfuse" : {
+					// 		"pred" : false,
+					// 		"prey" : false
+					// 	}
+					// }
+				},
+				// when you still want to allow configuring certain settings, but want to disable certain values, this is used to mark
+				// those values as invalid, and reset them to a value one does like
+				// invalid setting values will not be displayed in the settings menu
+				"invalidSettings" : {
+					// for example, blanket disabling fatal digest and resetting it to softDigest if it somehow loaded with that setting
+					// "mainEffect" : {
+					// 	"digest" : "softDigest"
+					// },
+
+					// a second example of instead of a blanket disabling of "mainEffect" being digest to instead only disable a specific location having it
+					// "locations" : {
+					// 	"belly" : {
+					// 		"mainEffect" : {
+					// 			"digest" : "softDigest"
+					// 		}
+					// 	}
+					// }
+
+					// These are simply examples of what I feel would be most common, any setting value can be marked as invalid
+				}
+			}
+		],
 
 
 		"uniqueId" : "sbqTemplate", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
@@ -70,20 +127,11 @@
 			]
 		]},
 
-		"entityPortrait" : true, // set this to true of you want the dialogue box portrait to use the entity's portrait
-		"portrait" : "bust",
-		// if you want to use specially drawn sprites for dialogue box portraits, remove the two portrait args above, and uncomment the args below
-		/*
-		"portrait" : "neutral.png",
-		"portraitPath" : "/humanoid/sbqTemplate/portraits/", // Depending on how you make your OC, you may want to have your portraits located in different places, so heres some suggestions
-		"portraitPath" : "/npcs/tenants/sbq/ocs/sbqTemplate/portraits/",
-		*/
-
-		"dialogueBoxScripts" : ["/npcs/tenants/sbq/ocs/sbqTemplateDialogueBoxScripts.lua"], // this is for scripts used by both the dialogue box and the NPC itself, used for adding extra behavior step scripts to the dialogue tree
+		"dialogueStepScripts" : ["/npcs/tenants/sbq/ocs/sbqTemplateDialogueBoxScripts.lua"], // this is for scripts used by both the dialogue box and the NPC itself, used for adding extra behavior step scripts to the dialogue tree
 		// as the scripts here are being called on both a UI and on the NPC, do avoid using the player or npc lua tables in such scripts unless said script would only trigger in the context of it having said table
 
 		//"dialogueTree" : "/npcs/tenants/sbq/sbqVoreVillager.npctype:scriptConfig.dialogueTree", // if one wants to just use the default random gen NPC dialogue tree, one can just delete the table and uncomment this
-		"dialogueTree" : ["/npcs/sbq/ocs/sbqTemplate.dialogueTree"],
+		"dialogueTree" : "/npcs/sbq/ocs/sbqTemplate.dialogueTree",
 		// below is the dialogue triggered by vanilla scripts, it has a rather simple structure, all the dialogue is in the external file
 		"dialog": {
 			"tenant": {
@@ -119,6 +167,7 @@
 				"cantreach": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.crewcantreach"
 			}
 		},
+
 		// sounds your NPC makes when speaking
 		"chatSounds": {
 			"default": {
@@ -133,62 +182,6 @@
 					"/sfx/humanoid/human_chatter_female3.ogg"
 				]
 			}
-		},
-
-		// the pred prefrences and general settings for this NPC are set here!
-		// set each one to the value you want, if there are any that are unset, they'll just go to the default values
-
-		"sbqDefaultSettings" : {
-			"mood" : "default",
-			"personality" : "default",
-
-			"bellyEffectSlot" : "none", // the settings in this group exist for each location, just use the correct name (belly, balls, shaft, womb, tail, breasts)
-			//"bellyHammerspaceDisabled" : false,
-			//"bellyVisualMin" : 0,
-			//"bellyVisualMax" : 2,
-			//"bellyNoneEnable" : true,
-			//"bellyHealEnable" : true,
-			//"bellyDigestEnable" : true,
-			//"bellySoftDigestEnable" : true,
-			//"bellyDifficultyMod" : 0,
-			//"bellyPredDigestDrop" : false,
-			"bellySounds" : true,
-
-			"displayDigest" : false,
-
-			"escapeDifficulty": 0,
-			"escapeDifficultyMin": 0,
-			"escapeDifficultyMax": 0,
-
-			"impossibleEscape": false,
-			"hammerspace" : false,
-
-			// predator prefrences
-			"oralVorePred" : true,
-			"tailVorePred" : false,
-			"absorbVorePred" : false,
-			"navelVorePred" : false,
-
-			"analVorePred" : false,
-			"unbirthVorePred" : false,
-			"cockVorePred" : false,
-			"breastVorePred" : false,
-
-			"bellyInfusionPred" : false,
-			"cockInfusionPred" : false,
-			"pussyInfusionPred" : false,
-			"breastsInfusionPred" : false
-		},
-
-		// any setting you define above can be modified by a player, this table allows you to define settings a player *cannot* modify, making sure your OC is always in line with your prefrences
-		"sbqOverrideSettings" : {
-			"crewmateGraduation" : false
-
-		},
-		// prey enabled settings are down below, but here are the override settings, which follow the same rules as below, however, a player is *not* allowed to modify any of these settings
-		// this is how you can enforce your OC only being prey for things they enjoy, or if they're prey at all
-		"sbqOverridePreyEnabled" : {
-
 		},
 
 		// rewards given to the player for doing things for the pred are here! cumulative ones accumulate time between different sessions, otherwise it only counts up per the current session
@@ -288,84 +281,58 @@
 			"day1Cumulative" : { "repeatable" : true, "timeCumulative" : 1440, "pool" : "highValueQuestRewards" }, // a full day
 			"week1Cumulative" : { "repeatable" : true, "timeCumulative" : 10080, "pool" : "highValueQuestRewards" } // a full week
 		}
-
-
-		// the args below are for randomizing specific settings between possible values in the table when the pred is first summoned, a few examples have been defined
-		// specific OCs will probably have specific prefrences in mind, so you may not want things to randomize at all
-		/*
-		"sbqRandomizeSettings" : {
-			"oralVorePred" : [true,false],
-
-			"bellyEffectSlot" : [ "none", "heal", "softDigest", "digest"],
-
-			// we shouldn't have the randomly generated preds generate with nsfw stuff
-			// not everyone wants to stumble across an NPC with their dick out
-
-			//"cockVorePred" : [true,false],
-		}
-		*/
-		/*
-		"sbqRandomizePreySettings" : {
-			"oralVore" : [true,false]
-		},
-		*/
 	},
 	"statusControllerSettings" : {
 		"stats" : {
-			"protection" : {
-				"baseValue" : 100.0 // this will make your OC immune to most forms of damage outside of vore
+			"maxEnergy" : {
+				"baseValue" : 100.0
+			},
+			"energyRegenPercentageRate" : {
+				"baseValue" : 0.585  // 1.75 second recharge time (STABLE)
+				// "baseValue" : 0.5    // 2 second recharge time
+				// "baseValue" : 0.45      // 2.25 second recharge time
+				// "baseValue" : 0.4     // 2.5 second recharge time
+			},
+			"foodDelta" : {
+				"baseValue" : -0.0583 // -70 food over 20 minutes
+			},
+			"sbqLustScriptMax" : {
+				"baseValue" : 0.33
+			},
+			"sbqLustScriptDelta" : {
+				"baseValue" : 0.0583
+			},
+			"sbqLustDelta" : {
+				"baseValue" : 0
+			},
+			"sbqRestScriptDelta" : {
+				"baseValue" : -0.0583
+			},
+			"sbqRestDelta" : {
+				"baseValue" : 0
+			}
+		},
+		"resources" : {
+			// if one doesn't want a certain stat to be displayed in the NPC's behavior pane, such as not wanting to be hungry or lustful, just remove it!
+			// however a number of the default dialogue is based on the percentage of hunger and lust, so it may need to be edited to trigger correctly
+			"food" : { // hunger
+				"deltaStat" : "foodDelta",
+				"initialPercentage" : 1.0,
+				"maxValue" : 70
+			},
+			"sbqLust" : {
+				"deltaStat" : "sbqLustDelta",
+				"initialPercentage" : 0.0,
+				"maxValue" : 100
+			},
+			"sbqRest" : {
+				"deltaStat" : "sbqRestDelta",
+				"initialPercentage" : 1.0,
+				"maxValue" : 100
 			}
 		},
 		"statusProperties" : {
-			"sbqDidVornyConvertCheck" : true,
-
-			// this arg for speciesAnimOverrideData should only be used if your NPC has a unique body, only mess with it if you know what you're doing
-			"speciesAnimOverrideData" : {},
-
-			// the prey prefrences for this NPC are set here!
-			// set each one to the value you want, if there are any that are unset, they'll just go to the default values
-
-			"sbqPreyEnabled" : {
-				"preyEnabled" : true,
-
-				"digestAllow": true,
-				"softDigestAllow" : true,
-				"digestItemDropsAllow" : true,
-
-				"cumDigestAllow": true,
-				"cumSoftDigestAllow": true,
-				"cumDigestItemDropsAllow" : true,
-
-				"femcumDigestAllow": true,
-				"femcumSoftDigestAllow": true,
-				"femcumDigestItemDropsAllow" : true,
-
-				"milkDigestAllow": true,
-				"milkSoftDigestAllow" : true,
-				"milkDigestItemDropsAllow" : true,
-
-				"transformAllow": true,
-				"cumTransformAllow": true,
-				"genderswapAllow": true,
-				"eggAllow": true,
-
-				"held" : true,
-
-				"oralVore" : true,
-				"tailVore" : true,
-				"absorbVore" : true,
-				"navelVore" : true,
-
-				"analVore" : true,
-				"unbirth" : true,
-				"cockVore" : true,
-				"breastVore" : true,
-
-				"bellyInfusion" : true,
-				"cockInfusion" : true,
-				"pussyInfusion" : true,
-				"breastsInfusion" : true
-			}
+			"sbqDidVornyConvertCheck" : true
 		}
 	}
 }
