@@ -187,22 +187,70 @@
 		// such as if one wanted to make sure their species/OC was never depicted as prey simply uncomment that line
 		// "/humanoid/any/disableAllVorePred.config",
 		// "/humanoid/any/disableAllVorePrey.config",
+		// "/humanoid/any/disableAllInfusePred.config",
+		// "/humanoid/any/disableAllInfusePrey.config",
 		// "/humanoid/any/disableAllTF.config",
 		// "/humanoid/any/disableAllSize.config",
 
 		// the final table containing everything specific to this species
 		{
+			// the default settings the species will have when initialized! things defined here can still be configured by players after spawn
+			// to better understand this, I would suggest heading ingame and then going to the misc tab and click the export settings button
+			// that will not only give an item containing your current settings, it will also print them to starbound.log which you can then
+			// just copy and past here and then possibly edit further as you see fit
 			"defaultSettings" : {
-				"visibleNavel" : true
+
 			},
+			// settings that are locked to a specific value and cannot be configured by the player, useful for disabling certain actions
+			// or things someone doesn't like, or simply preventing someone from diabling something important to the OC/species
+			// same structure as default settings above, only what is defined here is locked! only define something here if
+			// you want it to stay locked, this is what the above configs for diabling things do, but everything at once.
 			"overrideSettings" : {
+				// examples for disabling certain prefs
+				// "vorePrefs" : {
+				// 	"oralVore" : {
+				// 		"pred" : false,
+				// 		"prey" : false
+				// 	}
+				// },
+				// "infusePrefs" : {
+				// 	"bellyInfuse" : {
+				// 		"pred" : false,
+				// 		"prey" : false
+				// 	}
+				// }
+			},
+			// when you still want to allow configuring certain settings, but want to disable certain values, this is used to mark
+			// those values as invalid, and reset them to a value one does like
+			// invalid setting values will not be displayed in the settings menu
+			"invalidSettings" : {
+				// for example, blanket disabling fatal digest and resetting it to softDigest if it somehow loaded with that setting
+				// "mainEffect" : {
+				// 	"digest" : "softDigest"
+				// },
+
+				// a second example of instead of a blanket disabling of "mainEffect" being digest to instead only disable a specific location having it
+				// "locations" : {
+				// 	"belly" : {
+				// 		"mainEffect" : {
+				// 			"digest" : "softDigest"
+				// 		}
+				// 	}
+				// }
+
+				// These are simply examples of what I feel would be most common, any setting value can be marked as invalid
 			}
 		}
 	],
 
-	// custom animation! a feature implemented into the SBQ-Engine specifically to allow for races to be more in line with how the rest of the game
-	// the simple explaination is, races can be animated the same as everything else in the game now with their .animation files
-	// the caveat to that is there are a few parts and states that are still handled engine side, such as emotes and the body state
+	// Custom animation! a feature implemented into the SBQ-Engine specifically to allow for races to be more in line with the rest of the
+	// game. The simple explaination is, humanoid species can be animated the same as everything else in the game now with their .animation
+	// files. The caveat to that is that since characters can freely tf, all humanoid animations for every species need to have the same
+	// amount of animation parts and statetypes with the same names and priorities, good news is that you can have the animations within the
+	// statetypes and parts be whatever the fuck you want, it's just the parts themselves and the state priortiy need to be the same for the
+	// network to remain synced, so if you add any additional parts or states to your animation they'll need to be patched onto '/humanoid/
+	// any/dummy.animation.patch' (a file which every humanoid loads) as empty parts/states so that they technically have the part and
+	// therefore the net element, even if the part doesn't contain anything, therefore everything stays synced when a TF happens.
 	"animationCustom" : [
 		"/humanoid/any/humanoidPred.animation", // the basic vore animations needed by a basic humanoid race
 		"/humanoid/any/voreOccupants.animation" // the basic occupant animations needed

@@ -1,0 +1,24 @@
+[
+	{"op":"merge", "path":"", "value": {
+		"animatedParts": {
+			"stateTypes": {
+				"dummyState" : {
+					"priority" : 5,
+					"states" : {"none": { "frames": 0, "cycle": 0, "mode": "end" }}
+				}
+			},
+			"parts": {
+				"dummyPart" : {}
+			}
+		},
+		"transformationGroups": {
+			"dummyGroup": {}
+		},
+		"sounds": {
+			"dummySound" : []
+
+		},
+		"particleEmitters": {
+		}
+	}}
+]
