@@ -1,12 +1,13 @@
 const fs = require('fs');
 const {argv} = require('node:process');
 const JSONC = require('comment-json');
+const { stringify } = require('querystring');
 
 let dupes = {}
 
 let dialogueTreeFile = fs.readFileSync(argv[2], { encoding: "utf-8" });
 let dialogueFile = fs.readFileSync(argv[3], { encoding: "utf-8" });
-let secondaryDialogue
+let secondaryDialogue = {}
 if (argv[4]) {
 	let secondaryDialogueFile = fs.readFileSync(argv[4], { encoding: "utf-8" });
 	secondaryDialogue = JSONC.parse(secondaryDialogueFile);
@@ -31,6 +32,7 @@ delete dialogue["vanilla"]
 
 let output = JSONC.stringify(out, null, "\t");
 JSONC.assign(dialogue, JSONC.parse(`{\n// Unused Dialogue \n}`));
+checkRepoint(dialogue)
 let unusedDialogue = JSONC.stringify(dialogue, null, "\t")
 
 fs.writeFileSync(argv[3], output.replace(/\n\}$/, ",") + unusedDialogue.replace(/^\{/, ""), { encoding: "utf-8" });
@@ -52,10 +54,38 @@ function handle(path, dialogueTree1) {
 }
 
 function checkRepoint(input) {
+	let checked = {}
 	for (let [key, child] of Object.entries(input)) {
+		checked[key] = true;
+		console.log("checking duplicates! " + key)
+		for (let [key2, child2] of Object.entries(input)) {
+			if ((key != key2) && !checked[key2] && (JSONC.stringify(child) == JSONC.stringify(child2))) {
+				checked[key2] = true;
+				if (typeof child == "string") {
+					if ((child.substring(0, 1) == ":") | (child.substring(0, 1) == "/")) {
+						continue;
+					}
+				}
+				console.log("found duplicates! " + key2)
+				JSONC.assign(input, JSONC.parse(`{\n "${key2}": ":${key}" // duplicated lines\n }`));
+			}
+		}
+		for (let [key2, child2] of Object.entries(secondaryDialogue)) {
+			if (JSONC.stringify(child) == JSONC.stringify(child2)) {
+				if (typeof child == "string") {
+					if ((child.substring(0, 1) == ":") | (child.substring(0, 1) == "/")) {
+						continue;
+					}
+				}
+				JSONC.assign(input, JSONC.parse(`{\n "${key}": "/secondaryPath.dialogue:${key2}" // external lines\n }`));
+				break;
+			}
+		}
 		if (typeof child == "string") {
 			if ((child.substring(0, 1) == ":")) {
 				JSONC.assign(input, JSONC.parse(`{\n "${key}": "${child}" // duplicated lines\n }`));
+			} else if ((child.substring(0, 1) == "/")) {
+				JSONC.assign(input, JSONC.parse(`{\n "${key}": "${child}" // external lines\n }`));
 			}
 		}
 	}
@@ -72,14 +102,15 @@ function checkDialogue(input) {
 				if (!dupes[key]) {
 					console.log(key)
 					console.log(dialogue[key])
-					if (typeof dialogue[key] == "undefined") {
+					dupes[key] = true
+					if ((typeof dialogue[key] == "undefined") | (dialogue[key] == "Missing: " + key + " " + "<dialoguePath>")) {
+						delete dialogue[key]
 						if (argv[4] && secondaryDialogue[key]) {
-							JSONC.assign(out, { [key]: secondaryDialogue[key] });
+							JSONC.assign(out, JSONC.parse(`{\n "${key}": "/secondaryPath.dialogue:${key}" // external lines\n }`));
 						} else JSONC.assign(out, { [key]: "Missing: " + key + " " + "<dialoguePath>" });
 					} else {
 						let data = dialogue[key]
 						delete dialogue[key]
-						dupes[key] = true
 						JSONC.assign(out, { [key]: data })
 						JSONC.assign(out, checkDialogue(data));
 					}

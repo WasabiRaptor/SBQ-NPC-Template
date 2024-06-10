@@ -45,6 +45,8 @@
 			"ranks": [
 				"Hungriest <role>"
 			],
+			// the uniform doesn't matter since SBQ npcs don't use it, however,
+			// keep it in the data just incase some other mod tries to touch it and then crashes if it isn't there
 			"uniform": {
 				"chest": "protectoratechest",
 				"legs": "protectoratepants"

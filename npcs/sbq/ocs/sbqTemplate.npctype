@@ -43,7 +43,13 @@
 			"graduation" : {
 				"nextNpcType" : [] // this prevents the NPC from graduating into crew
 				//"nextNpcType" : ["sbqCrewTemplate"] // this lets the NPC graduate into a recruitable crewmember after doing a few quests for them
-			}
+			},
+			"enableParticipation" : true,
+
+			"timeLimit" : 30,
+			"nearbyQuestLimit" : 2,
+			"nearbyQuestRange" : 50,
+			"chance" : 0.04
 		},
 
 		// everything related to SBQ actions and settings and such is within here! this simply overrides values of the species specific vore config
