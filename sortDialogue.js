@@ -77,7 +77,7 @@ function checkRepoint(input) {
 						continue;
 					}
 				}
-				JSONC.assign(input, JSONC.parse(`{\n "${key}": "/secondaryPath.dialogue:${key2}" // external lines\n }`));
+				JSONC.assign(input, JSONC.parse(`{\n "${key}": "/npcs/sbq/dialogue/default.dialogue:${key2}" // external lines\n }`));
 				break;
 			}
 		}
@@ -106,7 +106,7 @@ function checkDialogue(input) {
 					if ((typeof dialogue[key] == "undefined") | (dialogue[key] == "Missing: " + key + " " + "<dialoguePath>")) {
 						delete dialogue[key]
 						if (argv[4] && secondaryDialogue[key]) {
-							JSONC.assign(out, JSONC.parse(`{\n "${key}": "/secondaryPath.dialogue:${key}" // external lines\n }`));
+							JSONC.assign(out, JSONC.parse(`{\n "${key}": "/npcs/sbq/dialogue/default.dialogue:${key}" // external lines\n }`));
 						} else JSONC.assign(out, { [key]: "Missing: " + key + " " + "<dialoguePath>" });
 					} else {
 						let data = dialogue[key]
