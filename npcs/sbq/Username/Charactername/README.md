@@ -1,6 +1,8 @@
 # What to do here
 
-This `.npctype` file is the most important file of the NPC as it determines all of their dialogue as well as their settings, behavior, vore prefrences, and any uinque scrips they may have.
+This `tenant.npctype` file is the most important file of the NPC as it determines all of their dialogue as well as their settings, behavior, vore prefrences, and any uinque scrips they may have.
+
+I have also provided `crewmember.npctype` here which is used for if you want them to be recruitable as crew! if not you can delete it and not worry about it, if you do want to use it you need to uncomment a line in `tenant.npctype`'s quest generator graduation parameters.
 
 ## identity
 
@@ -26,7 +28,7 @@ Scripts added here are used by the dialogue tree when handling `next` steps
 
 This, this will likely be the largest endeavor in making an OC if you don't just want to use the default lines already created.
 
-The `dialogueTree` table points to all the lines the NPC will have for various interactions which are within `sbqTemplate.dialogueTree`, you can either define unique lines to your NPC by editing or adding lines to the contexts already there, all the dialogue itself should be contained in the `sbqTemplate.dialogue` file
+The `dialogueTree` table points to all the lines the NPC will have for various interactions which are within `sbq/Username/Charactername.dialogueTree`, you can either define unique lines to your NPC by editing or adding lines to the contexts already there, all the dialogue itself should be contained in the `sbq/Username/Charactername.dialogue` file
 
 The dialogue tree has multiple starts relating to different contexts, only the start of each part of the tree is pre defined and must be used, after the start, one can delete or change anything about the tree to make it behave as they wish for their NPC, and get as specific in context of a certain vore type as they wish with their lines by checking the current settings.
 
@@ -39,6 +41,6 @@ you can also delete parts of the dialogue tree you simply do not want to write d
 ## Checking if you have any missing dialogue
 
 to check if you have any missing dialogue that is referenced in your dialouge tree you can use this node js script, it will sort all the dialogue contexts that your tree has referenced in order, as well as inserting notes for missing dialogue, which you could then either decide to remove from the tree, or fill out the missing dialogue. Any dialogue within the file that isn't referenced by the tree will be placed at the bottom of the file underneath an 'unused' comment.
-`node sortDialogue.js 'npcs/sbq/ocs/sbqTemplate.dialogueTree' 'npcs/sbq/ocs/sbqTemplate.dialogue'`
+`node sortDialogue.js 'npcs/sbq/Username/Charactername/npc.dialogueTree' 'npcs/sbq/Username/Charactername/npc.dialogue'`
 
 this script doesn't care about dialouge that has a path pointing outside the relevant file, so be aware of that if you are pointing to other files as well.

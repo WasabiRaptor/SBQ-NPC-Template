@@ -1,5 +1,5 @@
 {
-	"kind" : "sbqTemplate",
+	"kind" : "sbq/Username/Charactername",
 
 	"charCreationTooltip" : {
 		"title" : "Template",
@@ -7,12 +7,12 @@
 		"description" : "Are you sure you're supposed to be able to read this?"
 	},
 
-	"nameGen" : [ "/species/sbqTemplate_namegen.config:names", "/species/sbqTemplate_namegen.config:names" ], // first one is for male, second is for female
+	"nameGen" : [ "/species/sbq/Username/Charactername_namegen.config:names", "/species/sbq/Username/Charactername_namegen.config:names" ], // first one is for male, second is for female
 
 	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
 
-	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "HUMAN", "Personality" ],
+	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Species", "Personality" ],
 	"skull" : "/humanoid/human/dead.png",
 	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF",
 	"defaultBlueprints" : {
@@ -252,6 +252,10 @@
 	// any/dummy.animation.patch' (a file which every humanoid loads) as empty parts/states so that they technically have the part and
 	// therefore the net element, even if the part doesn't contain anything, therefore everything stays synced when a TF happens.
 	"animationCustom" : [
+		// "/humanoid/any/removeTail.animation", // this is for if the humanoid sprites already have a built in tail and you want to be able to mask it out
+		// to be compatible with SBQ's swappable tails for tail vore and etc. However this is not necessary since you are adding your own species
+		// it would be better to remove the tail from all sprites and create a separate image for the tail to be able to be switched out.
+
 		"/humanoid/any/humanoidPred.animation", // the basic vore animations needed by a basic humanoid race
 		"/humanoid/any/voreOccupants.animation" // the basic occupant animations needed
 	]

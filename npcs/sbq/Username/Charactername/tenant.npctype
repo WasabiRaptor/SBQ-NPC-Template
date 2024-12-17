@@ -1,5 +1,5 @@
 {
-	"type" : "sbqTemplate",
+	"type" : "sbq/Username/Charactername",
 	"baseType" : "villager",
 
 	"scripts" : [
@@ -9,7 +9,7 @@
 	],
 
 	// you really should make sure to define the npcname so the OC actually has the OC's name
-	"npcname" : "Template",
+	"npcname" : "Charactername",
 	// identity is quite important if you don't want things to be randomly generated
 	// great thing here is one can define whatever they want as the name of the hair, facial hair, or facial mask types, even if they're not
 	// available to the player in normal customization it just has to be in the folder with the rest of the hairs for the species
@@ -34,15 +34,16 @@
 		"isOC" : true, // this is just for scripts to identify this NPC as an OC and for some specific behavior relating to that
 
 		"behavior" : "sbqvorevillager",
-		"sbqConvertType" : false, // this is simply for the npc type it could convert into that isn't vorny, only change this if you have the npc exist in a different mod without sbq
+
 		"behaviorConfig": {
 			"emptyHands": true
 		},
 		"questGenerator" : {
 			"pools" : ["sbq_common", "sbq_transform", "sbq_vore", "tenant"],
 			"graduation" : {
-				"nextNpcType" : [] // this prevents the NPC from graduating into crew
-				//"nextNpcType" : ["sbqCrewTemplate"] // this lets the NPC graduate into a recruitable crewmember after doing a few quests for them
+				"nextNpcType" : [  // empty table prevents the NPC from graduating into crew
+					// "sbq/Username/Charactername-crewmember" // this lets the NPC graduate into a recruitable crewmember after doing a few quests for them
+				]
 			},
 			"enableParticipation" : true,
 
@@ -51,6 +52,12 @@
 			"nearbyQuestRange" : 50,
 			"chance" : 0.04
 		},
+
+		// These are intended to be inheritied by variants of the NPC
+		"sbqConvertType" : false, // the npc id for converting it to a non-vorny variant from the settings menu, such as if the oc has a variant that already exists in another mod
+		"sbqDeedConvertType" : "sbq/Username/Charactername", // the npc type id it should convert to when inserted into a vore colony deed
+		"sbqEvilDeedConvertType" : "sbq/Username/Charactername", // the npc type id it should convert to when inserted into an evil colony deed (such as a bandit variant if one is made)
+
 
 		// everything related to SBQ actions and settings and such is within here! this simply overrides values of the species specific vore config
 		// so if something is more inherent to the species than the OC itself, perhaps it should be defined in the species vore config!
@@ -114,14 +121,14 @@
 		],
 
 
-		"uniqueId" : "sbqTemplate", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
+		"uniqueId" : "sbq/Username/Charactername", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
 
 		// if you understand stardust metagui, you can create the NPC's 'bio' tab here
 		// settingsGuiStrings
 		"tenantBio" : { "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [
 			{ "mode" : "vertical" },
 			[
-				//{ "type" : "image", "file" : "/humanoid/sbqTemplate/portraits/neutral.png" },
+				//{ "type" : "image", "file" : "/humanoid/sbq/Username/Charactername/portraits/neutral.png" },
 				[
 					[ { "type" : "label", "text" : "Age: ??"}, { "type" : "label", "text" : "Gender: ???"} ],
 					[ { "type" : "label", "text" : "Pronouns: ???"}, { "type" : "label", "text" : "Species: ???"} ],
@@ -133,44 +140,41 @@
 			]
 		]},
 
-		"dialogueStepScripts" : ["/npcs/tenants/sbq/ocs/sbqTemplateDialogueBoxScripts.lua"], // this is for scripts used by both the dialogue box and the NPC itself, used for adding extra behavior step scripts to the dialogue tree
-		// as the scripts here are being called on both a UI and on the NPC, do avoid using the player or npc lua tables in such scripts unless said script would only trigger in the context of it having said table
-
 		//"dialogueTree" : "/npcs/tenants/sbq/sbqVoreVillager.npctype:scriptConfig.dialogueTree", // if one wants to just use the default random gen NPC dialogue tree, one can just delete the table and uncomment this
-		"dialogueTree" : "/npcs/sbq/ocs/sbqTemplate.dialogueTree",
+		"dialogueTree" : "/npcs/sbq/Username/Charactername/npc.dialogueTree",
 		// below is the dialogue triggered by vanilla scripts, it has a rather simple structure, all the dialogue is in the external file
 		"dialog": {
 			"tenant": {
 				"grumbles": {
-					"tagCriteria": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.tagCriteria",
-					"enclosedArea": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.enclosedArea",
-					"otherDeed": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.otherDeed",
-					"severe": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.severe",
-					"final": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.final"
+					"tagCriteria": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.tagCriteria",
+					"enclosedArea": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.enclosedArea",
+					"otherDeed": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.otherDeed",
+					"severe": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.severe",
+					"final": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.final"
 				},
 				"arrivedHome": {
-					"beacon": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.beacon",
-					"rent": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.rent"
+					"beacon": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.beacon",
+					"rent": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.rent"
 				}
 			},
 			"flee": {
-				"helpme": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.helpme",
-				"safe": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.safe"
+				"helpme": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.helpme",
+				"safe": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.safe"
 			},
-			"accuse": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.accuse",
-			"alert": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.alert",
-			"attack" : "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.attack",
-			"reattack" : "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.reattack",
-			"killedTarget" : "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.killedTarget",
-			"lostTarget" : "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.lostTarget",
-			"outOfSight" : "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.outOfSight",
-			"cheerOn" : "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.cheerOn",
-			"cantreach": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.cantReachEnemy",
+			"accuse": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.accuse",
+			"alert": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.alert",
+			"attack" : "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.attack",
+			"reattack" : "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.reattack",
+			"killedTarget" : "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.killedTarget",
+			"lostTarget" : "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.lostTarget",
+			"outOfSight" : "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.outOfSight",
+			"cheerOn" : "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.cheerOn",
+			"cantreach": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.cantReachEnemy",
 			"crewmember": {
-				"offer": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.offer",
-				"roleDescription": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.roleDescription",
-				"respawned": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.respawned",
-				"cantreach": "/npcs/tenants/sbq/ocs/sbqtemplate.dialogue:vanilla.crewcantreach"
+				"offer": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.offer",
+				"roleDescription": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.roleDescription",
+				"respawned": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.respawned",
+				"cantreach": "/npcs/tenants/sbq/Username/Charactername/npc.dialogue:vanilla.crewcantreach"
 			}
 		},
 

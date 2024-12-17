@@ -1,6 +1,6 @@
 {
-	"type": "sbqCrewTemplate",
-	"baseType": "sbqTemplate",
+	"type": "sbq/Username/Charactername-crewmember",
+	"baseType": "sbq/Username/Charactername",
 
 	"damageTeamType": "friendly",
 	// Remove protection and powermultiplier gained from being level 1 as scaling is from player armor
