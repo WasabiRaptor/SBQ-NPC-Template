@@ -32,6 +32,7 @@
 	"scriptConfig" : {
 		"sbqNPC" : true,
 		"isOC" : true, // this is just for scripts to identify this NPC as an OC and for some specific behavior relating to that
+		"uniqueId" : "sbq/Username/Charactername", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
 
 		"behavior" : "sbqvorevillager",
 
@@ -58,31 +59,56 @@
 		"sbqDeedConvertType" : "sbq/Username/Charactername", // the npc type id it should convert to when inserted into a vore colony deed
 		"sbqEvilDeedConvertType" : "sbq/Username/Charactername", // the npc type id it should convert to when inserted into an evil colony deed (such as a bandit variant if one is made)
 
+		// this is the data that defines this NPC as a tenant available in the SBQ deeds
+		"sbqTenantData" : {
+			"priority" : 60,
+			"colonyTagCriteria" : {
+				// You should make the colony tags below reflect what your OC likes
+				"office" : 4
+			},
+			"tenant" : {
+				"spawn": "npc", "species": "sbq/Username/Charactername", "type": "sbq/Username/Charactername", "overrides": {},
+				"orderFurniture" : [
+					// you should populate this list with objects that have the requisite colonytags
+					{"name":"officedesk", "count":1},
+					{"name":"officelamp", "count":1}
+				]
+			}
+		},
 
 		// everything related to SBQ actions and settings and such is within here! this simply overrides values of the species specific vore config
-		// so if something is more inherent to the species than the OC itself, perhaps it should be defined in the species vore config!
-		"voreConfig" : [
-			// These are shortcuts to add in configuration to disable certain kinks one simply needs to uncomment that line and
-			// everything relevant to that will automatically be disabled!
-			// "/humanoid/any/disableAllVorePred.config",
-			// "/humanoid/any/disableAllVorePrey.config",
-			// "/humanoid/any/disableAllInfusePred.config",
-			// "/humanoid/any/disableAllInfusePrey.config",
-			// "/humanoid/any/disableAllTF.config",
-			// "/humanoid/any/disableAllSize.config",
-			{
-				// the default settings the NPC will have when initialized! things defined here can still be configured by players after spawn
-				// to better understand this, I would suggest heading ingame and then going to the misc tab and click the export settings button
-				// that will not only give an item containing your current settings, it will also print them to starbound.log which you can then
-				// just copy and past here and then possibly edit further as you see fit
-				"defaultSettings" : {
+		"sbqSettingsConfig" : {
+			"includes" : [
+				// These are shortcuts to add in configuration to disable certain kinks one simply needs to uncomment that line and
+				// everything relevant to that will automatically be disabled!
+				// "/species/sbq/disableAllVorePred.config",
+				// "/species/sbq/disableAllVorePrey.config",
+				// "/species/sbq/disableAllInfusePred.config",
+				// "/species/sbq/disableAllInfusePrey.config",
+				// "/species/sbq/disableAllTF.config",
+				// "/species/sbq/disableAllSize.config"
+			],
+			// the default settings the NPC will have when initialized! things defined here can still be configured by players after spawn
+			// to better understand this, I would suggest heading ingame and then going to the misc tab and click the export settings button
+			// that will not only give an item containing your current settings, it will also print them to starbound.log which you can then
+			// just copy and past here and then possibly edit further as you see fit
+			"defaultSettings" : {
+				"any":{ // the settings config can group things by entity type where the "any" table applies to everything
 
 				},
-				// settings that are locked to a specific value and cannot be configured by the player, useful for disabling certain actions
-				// or things someone doesn't like, or simply preventing someone from diabling something important to the OC
-				// same structure as default settings above, only what is defined here is locked! only define something here if
-				// you want it to stay locked
-				"overrideSettings" : {
+				"npc":{
+
+				},
+				"object":{
+
+				}
+			},
+			// settings that are locked to a specific value and cannot be configured by the player, useful for disabling certain actions
+			// or things someone doesn't like, or simply preventing someone from diabling something important to the OC
+			// same structure as default settings above, only what is defined here is locked! only define something here if
+			// you want it to stay locked
+			"overrideSettings" : {
+				"any":{
 					// examples for disabling certain prefs
 					// "vorePrefs" : {
 					// 	"oralVore" : {
@@ -97,10 +123,18 @@
 					// 	}
 					// }
 				},
-				// when you still want to allow configuring certain settings, but want to disable certain values, this is used to mark
-				// those values as invalid, and reset them to a value one does like
-				// invalid setting values will not be displayed in the settings menu
-				"invalidSettings" : {
+				"npc":{
+
+				},
+				"object":{
+
+				}
+			},
+			// when you still want to allow configuring certain settings, but want to disable certain values, this is used to mark
+			// those values as invalid, and reset them to a value one does like
+			// invalid setting values will not be displayed in the settings menu
+			"invalidSettings" : {
+				"any":{
 					// for example, blanket disabling fatal digest and resetting it to softDigest if it somehow loaded with that setting
 					// "mainEffect" : {
 					// 	"digest" : "softDigest"
@@ -116,12 +150,17 @@
 					// }
 
 					// These are simply examples of what I feel would be most common, any setting value can be marked as invalid
+				},
+				"npc":{
+
+				},
+				"object":{
+
 				}
 			}
-		],
+		},
 
 
-		"uniqueId" : "sbq/Username/Charactername", // the unique ID for the NPC, used for other NPCs that may want to detect this specific one, and to prevent multiple instances of the same character appearing on one planet
 
 		// if you understand stardust metagui, you can create the NPC's 'bio' tab here
 		// settingsGuiStrings

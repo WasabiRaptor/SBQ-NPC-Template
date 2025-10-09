@@ -1,9 +1,0 @@
-[
-	// this patch adds the safe hub version of the NPC to the list the vore deed displays, as well as lets you have a shortcut to not have to type out the full tenant ID
-	// this isn't necessary to have them summonable
-	{
-		"op": "add",
-		"path": "/Charactername", // the name shortcut to type in, try to make sure it doesn't conflict with any others, if theres another with the same character name, try appending something such as species or username or some adjective maybe
-		"value": "sbq/Username/Charactername" // the ID for the tenant you added
-	}
-]
