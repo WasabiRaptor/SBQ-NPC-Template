@@ -157,6 +157,12 @@
 				"object":{
 
 				}
+			},
+			// the lists of values available from each dropdown selection
+			"selectValues" : {
+				"personality" : [
+					"default"
+				]
 			}
 		},
 
