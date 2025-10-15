@@ -1,5 +1,5 @@
 {
-	"dialogueStepScripts" : ["/npcs/tenants/sbq/Username/Charactername/DialogueBoxScripts.lua"], // this is for scripts used by both the dialogue box and the NPC itself, used for adding extra behavior step scripts to the dialogue tree
+	"dialogueStepScripts" : ["/npcs/sbq/Username/Charactername/DialogueBoxScripts.lua"], // this is for scripts used by both the dialogue box and the NPC itself, used for adding extra behavior step scripts to the dialogue tree
 	// as the scripts here are being called on both a UI and on the NPC, do avoid using the player or npc lua tables in such scripts unless said script would only trigger in the context of it having said table
 
 	"dialogueFile" : "/npcs/sbq/dialogue/default.dialogue",
