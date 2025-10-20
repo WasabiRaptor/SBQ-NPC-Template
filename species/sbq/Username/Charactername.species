@@ -11,6 +11,7 @@
 	"nameGen" : [ "/species/sbq/Username/Charactername.species:nameGenConfig", "/species/sbq/Username/Charactername.species:nameGenConfig" ],
 	"nameGenConfig": ["Charactername"],
 	"forceName" : "Charactername", // this makes it so when using SBQ's TF system, players are forced to use their name when tfed as them
+	"potionRarity" : "essential", // OCs typically have essential rarity for the potions
 
 	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
 	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
