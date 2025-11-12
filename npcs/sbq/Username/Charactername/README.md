@@ -14,15 +14,9 @@ If you've created a player character and you want to use their appearance for an
 
 This is a must if you don't want to have multiple instances of the same character around, it should be replaced with the ID of your NPC, if not, do that now.
 
-## voreConfig
+## sbqSettingsConfig
 
 This is used for SBQ specific data regarding what the NPC's default settings are, what actions they can perform, among other things. It is very important to look at this and go over it to make sure your NPC won't be partaking in kinks you don't want them to!
-
-## dialogueStepScripts
-
-If you want to have scripts for custom behavior for the dialogue tree and dialoguebox, add some scripts to the `dialogueStepScripts` arg.
-
-Scripts added here are used by the dialogue tree when handling `next` steps
 
 ## dialogueTree
 
