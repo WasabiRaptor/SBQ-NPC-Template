@@ -2,7 +2,7 @@
 	"kind" : "sbq/Username/Charactername",
 
 	"charCreationTooltip" : {
-		"title" : "Template",
+		"title" : "Charactername",
 		"subTitle" : "The potential for vore.",
 		"description" : "Are you sure you're supposed to be able to read this?"
 	},
@@ -26,30 +26,21 @@
 		{
 			"name" : "male",
 			"image" : "/interface/title/male.png",
-			"characterImage" : "/interface/title/humanmale.png",
-			// if you want your OC to have multiple hair types to choose from, you should probably add their names here!
-			"hair" : [ "0" ],
-			"shirt" : [ "sbq_nude_chest" ],
-			"pants" : [ "sbq_nude_legs" ],
-			"facialHairGroup" : "",
-			"facialHair" : [ ],
-			"facialMaskGroup" : "",
-			"facialMask" : [ ]
+			"characterImage" : "/interface/title/male.png"
 		},
 		{
 			"name" : "female",
 			"image" : "/interface/title/female.png",
-			"characterImage" : "/interface/title/humanfemale.png",
-			// if you want your OC to have multiple hair types to choose from, you should probably add their names here!
-			"hair" : [ "0" ],
-			"shirt" : [ "sbq_nude_chest" ],
-			"pants" : [ "sbq_nude_legs" ],
-			"facialHairGroup" : "",
-			"facialHair" : [ ],
-			"facialMaskGroup" : "",
-			"facialMask" : [ ]
+			"characterImage" : "/interface/title/female.png"
 		}
 	],
+	"hair" : [ "0" ],
+	"shirt" : [ "sbq_nude_chest" ],
+	"pants" : [ "sbq_nude_legs" ],
+	"facialHairGroup" : "",
+	"facialHair" : [ ],
+	"facialMaskGroup" : "",
+	"facialMask" : [ ],
 
 	// These are the tables for the replace colors, if your sprites neeed to have their colors replaced, you should probably define those colors here
 	"bodyColor" : [
@@ -364,7 +355,7 @@
 		},
 
 		// infuse sprites for the quadruped species' belly
-		"sbq/infused/bellyQuadruped.png": {
+		"sbq/infused/quadruped/belly.png": {
 			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
 
 			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
@@ -375,7 +366,7 @@
 				]
 			]
 		},
-		"sbq/infused/bellyQuadruped_noNavel.png": {
+		"sbq/infused/quadruped/belly_noNavel.png": {
 			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
 			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
