@@ -44,7 +44,7 @@
 			"pools" : ["sbq_common", "sbq_transform", "sbq_vore", "tenant"],
 			"graduation" : {
 				"nextNpcType" : [  // empty table prevents the NPC from graduating into crew
-					// "sbq/Username/Charactername-crewmember" // this lets the NPC graduate into a recruitable crewmember after doing a few quests for them
+					// [1,"sbq/Username/Charactername-crewmember"] // this lets the NPC graduate into a recruitable crewmember after doing a few quests for them
 				]
 			},
 			"enableParticipation" : true,
